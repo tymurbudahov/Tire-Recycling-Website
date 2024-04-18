@@ -6,7 +6,7 @@ import LocaleSwitcher from "../LocaleSwitcher";
 import { useTranslations } from "next-intl";
 
 export default function Navbar() {
-  const t = useTranslations("IndexPage"); //added
+  const t = useTranslations("Navbar"); //added
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -24,7 +24,7 @@ export default function Navbar() {
           />
           <span className="self-center text-2lg font-semibold whitespace-nowrap dark:text-white">
             {/* added */}
-            {t("title")}
+            {t("company-name")}
           </span>
         </Link>
         <button
@@ -62,7 +62,7 @@ export default function Navbar() {
                 href="/"
                 className="block py-2 px-3 text-white bg-blue-700 rounded lg:bg-transparent lg:text-blue-700 lg:p-0 lg:dark:text-blue-500 dark:bg-blue-600 lg:dark:bg-transparent"
               >
-                Home
+                {t("home")}
               </Link>
             </li>
             <li>
@@ -70,7 +70,7 @@ export default function Navbar() {
                 href="/dashboard"
                 className="block py-2 px-3 text-white lg:bg-transparent lg:p-0 lg:dark:bg-transparent lg:hover:text-blue-700 lg:dark:hover:text-blue-500"
               >
-                About Us
+                {t("about-us")}
               </Link>
             </li>
             <li className="relative">
@@ -79,7 +79,7 @@ export default function Navbar() {
                 id="dropdownNavbarLink"
                 className="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 lg:w-auto dark:text-white lg:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 lg:dark:hover:bg-transparent"
               >
-                Our Products
+                {t("our-products")}
                 <svg
                   className="w-2.5 h-2.5 ml-2"
                   aria-hidden="true"
@@ -154,13 +154,13 @@ export default function Navbar() {
               href="/"
               className="block py-2 px-3 text-white lg:bg-transparent lg:p-0 lg:dark:bg-transparent lg:hover:text-blue-700 lg:dark:hover:text-blue-500"
             >
-              Dispose Tires
+              {t("dispose-tires")}
             </Link>
             <Link
               href="/"
               className="block py-2 px-3 text-white lg:bg-transparent lg:p-0 lg:dark:bg-transparent lg:hover:text-blue-700 lg:dark:hover:text-blue-500"
             >
-              Contact Us
+              {t("contact-us")}
             </Link>
             <LocaleSwitcher />
           </ul>
