@@ -40,6 +40,7 @@ export default async function LocaleLayout({
       <body className={clsx(inter.className, "flex h-full flex-col")}>
         <Navigation />
         {children}
+        {/* Getting error with fill-rule in footer component */}
         <Footer />
       </body>
     </html>

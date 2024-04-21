@@ -1,4 +1,6 @@
 export default function OurProducts() {
+  const crumbRubberImage = "/mainPage/crumb-rubber.webp";
+
   return (
     <section className="bg-white dark:bg-gray-900">
       <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
@@ -17,7 +19,7 @@ export default function OurProducts() {
             <div>
               <img
                 className="h-auto max-w-full rounded-md"
-                src="/images/mainPage/crumb-rubber.webp"
+                src={crumbRubberImage}
                 alt="image description"
               />
             </div>
@@ -34,7 +36,7 @@ export default function OurProducts() {
             <div>
               <img
                 className="h-auto max-w-full rounded-md"
-                src="/images/mainPage/crumb-rubber.webp"
+                src={crumbRubberImage}
                 alt="image description"
               />
             </div>
@@ -50,7 +52,7 @@ export default function OurProducts() {
             <div>
               <img
                 className="h-auto max-w-full rounded-md"
-                src="/images/mainPage/crumb-rubber.webp"
+                src={crumbRubberImage}
                 alt="image description"
               />
             </div>
@@ -66,7 +68,7 @@ export default function OurProducts() {
             <div>
               <img
                 className="h-auto max-w-full rounded-md"
-                src="/images/mainPage/crumb-rubber.webp"
+                src={crumbRubberImage}
                 alt="image description"
               />
             </div>
@@ -82,7 +84,7 @@ export default function OurProducts() {
             <div>
               <img
                 className="h-auto max-w-full rounded-md"
-                src="/images/mainPage/crumb-rubber.webp"
+                src={crumbRubberImage}
                 alt="image description"
               />
             </div>
@@ -98,7 +100,7 @@ export default function OurProducts() {
             <div>
               <img
                 className="h-auto max-w-full rounded-md"
-                src="/images/mainPage/crumb-rubber.webp"
+                src={crumbRubberImage}
                 alt="image description"
               />
             </div>
