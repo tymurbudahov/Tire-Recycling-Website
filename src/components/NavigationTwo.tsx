@@ -71,7 +71,7 @@ export default function NavigationTwo() {
             </li>
             <li>
               <NavigationLink
-                href="/about-us"
+                href={"/about-us" as any}
                 className="py-2 px-3 text-white lg:bg-transparent lg:p-0 lg:dark:bg-transparent lg:hover:text-blue-700 lg:dark:hover:text-blue-500"
               >
                 {t("about-us")}
@@ -105,7 +105,7 @@ export default function NavigationTwo() {
                 <ul className="py-1 text-sm text-gray-700 dark:text-gray-400">
                   <li>
                     <NavigationLink
-                      href="/option1"
+                      href={"/option-1" as any}
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     >
                       Option 1
@@ -113,7 +113,7 @@ export default function NavigationTwo() {
                   </li>
                   <li>
                     <NavigationLink
-                      href="/option2"
+                      href={"/option-2" as any}
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     >
                       Option 2
