@@ -4,6 +4,7 @@ import FirstSectionMain from "@/components/FirstSectionMain/FirstSectionMain";
 import DisposeTires from "@/components/DisposeTires/DisposeTires";
 import OurProducts from "@/components/OurProducts/OurProducts";
 import ApplicationSectionMain from "@/components/ApplicationsSectionMain/ApplicationSectionMain";
+import SubEmail from "@/components/SubEmail/SubEmail";
 
 type Props = {
   params: { locale: string };
@@ -28,6 +29,9 @@ export default function IndexPage({ params: { locale } }: Props) {
 
       {/* //New section */}
       <ApplicationSectionMain />
+
+      {/* Subscribe to email list */}
+      <SubEmail />
     </>
   );
 }

@@ -67,7 +67,7 @@ export default function Navbar() {
             </li>
             <li>
               <Link
-                href="/dashboard"
+                href="/about-us"
                 className="block py-2 px-3 text-white lg:bg-transparent lg:p-0 lg:dark:bg-transparent lg:hover:text-blue-700 lg:dark:hover:text-blue-500"
               >
                 {t("about-us")}

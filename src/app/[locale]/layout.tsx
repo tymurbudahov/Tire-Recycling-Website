@@ -4,6 +4,7 @@ import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import { ReactNode } from "react";
 import Navigation from "@/components/Navigation";
 import { locales } from "@/config";
+import Footer from "@/components/Footer/Footer";
 import { NextIntlClientProvider } from "next-intl";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -39,6 +40,7 @@ export default async function LocaleLayout({
       <body className={clsx(inter.className, "flex h-full flex-col")}>
         <Navigation />
         {children}
+        <Footer />
       </body>
     </html>
   );

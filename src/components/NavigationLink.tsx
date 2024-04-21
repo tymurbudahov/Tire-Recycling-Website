@@ -1,5 +1,5 @@
 "use client";
-
+//Not using it.
 import clsx from "clsx";
 import { useSelectedLayoutSegment } from "next/navigation";
 import { ComponentProps } from "react";
