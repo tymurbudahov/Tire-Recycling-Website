@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 
 export default function FirstSectionMain() {
-  const t = useTranslations("MainPage");
+  const t = useTranslations("IndexPage");
 
   return (
     <section className="bg-white dark:bg-gray-900">
@@ -11,7 +11,7 @@ export default function FirstSectionMain() {
             {t("title")}
           </h2>
           <p className="mb-4">{t("description")}</p>
-          <p>Together we can create a clean and green future for Ukraine.</p>
+          <p>{t("description")}</p>
         </div>
         <div className="grid grid-cols-2 gap-4 mt-8">
           <img
