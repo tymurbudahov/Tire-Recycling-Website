@@ -162,7 +162,7 @@ export default function Navbar() {
             >
               {t("contact-us")}
             </Link>
-            <LocaleSwitcher />
+            {/* <LocaleSwitcher /> */}
           </ul>
         </div>
       </div>

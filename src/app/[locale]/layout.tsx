@@ -6,6 +6,7 @@ import Navigation from "@/components/Navigation";
 import { locales } from "@/config";
 import Footer from "@/components/Footer/Footer";
 import { NextIntlClientProvider } from "next-intl";
+import NavigationTwo from "@/components/NavigationTwo";
 
 const inter = Inter({ subsets: ["latin"] });
 
