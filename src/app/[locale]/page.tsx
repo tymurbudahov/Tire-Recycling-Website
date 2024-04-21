@@ -14,8 +14,6 @@ export default function IndexPage({ params: { locale } }: Props) {
   // Enable static rendering
   unstable_setRequestLocale(locale);
 
-  const t = useTranslations("MainPage");
-
   return (
     <>
       {/* //New section */}

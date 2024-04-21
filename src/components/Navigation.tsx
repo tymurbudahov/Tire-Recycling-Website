@@ -1,8 +1,4 @@
-import { useTranslations } from "next-intl";
-import LocaleSwitcher from "./LocaleSwitcher";
-import NavigationLink from "./NavigationLink";
 import { NextIntlClientProvider, useMessages } from "next-intl";
-import Navbar from "./Navbar/Navbar";
 import NavigationTwo from "./NavigationTwo";
 
 export default function Navigation() {
