@@ -15,6 +15,7 @@ export default function Page() {
       <OurGoals />
       <OurTeam />
       <SecondSectionAbout />
+      <Applications />
     </>
   );
 }
