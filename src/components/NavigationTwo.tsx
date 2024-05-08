@@ -156,7 +156,7 @@ export default function NavigationTwo() {
             </li>
             <li>
               <NavigationLink
-                href="/"
+                href={"/dispose-tires" as any}
                 className="py-2 px-3 text-white lg:bg-transparent lg:p-0 lg:dark:bg-transparent lg:hover:text-blue-700 lg:dark:hover:text-blue-500"
               >
                 {t("dispose-tires")}
@@ -164,7 +164,7 @@ export default function NavigationTwo() {
             </li>
             <li>
               <NavigationLink
-                href="/contact-us"
+                href={"/contact-us" as any}
                 className="py-2 px-3 text-white lg:bg-transparent lg:p-0 lg:dark:bg-transparent lg:hover:text-blue-700 lg:dark:hover:text-blue-500"
               >
                 {t("contact-us")}
