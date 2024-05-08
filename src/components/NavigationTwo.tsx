@@ -164,7 +164,7 @@ export default function NavigationTwo() {
             </li>
             <li>
               <NavigationLink
-                href="/"
+                href="/contact-us"
                 className="py-2 px-3 text-white lg:bg-transparent lg:p-0 lg:dark:bg-transparent lg:hover:text-blue-700 lg:dark:hover:text-blue-500"
               >
                 {t("contact-us")}
