@@ -105,10 +105,10 @@ export default function NavigationTwo() {
                 <ul className="py-1 text-sm text-gray-700 dark:text-gray-400">
                   <li>
                     <NavigationLink
-                      href={"/option-1" as any}
+                      href={"/crumb-rubber" as any}
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     >
-                      Option 1
+                      Crumb Rubber
                     </NavigationLink>
                   </li>
                   <li>
@@ -117,6 +117,30 @@ export default function NavigationTwo() {
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     >
                       Option 2
+                    </NavigationLink>
+                  </li>
+                  <li>
+                    <NavigationLink
+                      href={"/option-2" as any}
+                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >
+                      Option 3
+                    </NavigationLink>
+                  </li>
+                  <li>
+                    <NavigationLink
+                      href={"/option-2" as any}
+                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >
+                      Option 4
+                    </NavigationLink>
+                  </li>
+                  <li>
+                    <NavigationLink
+                      href={"/option-2" as any}
+                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >
+                      Option 5
                     </NavigationLink>
                   </li>
                 </ul>
