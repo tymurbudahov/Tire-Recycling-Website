@@ -82,7 +82,7 @@ export default function NavigationTwo() {
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                 className="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 lg:w-auto dark:text-white lg:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 lg:dark:hover:bg-transparent"
               >
-                More Options
+                Our Products
                 <svg
                   className="w-2.5 h-2.5 ml-2"
                   aria-hidden="true"
@@ -113,34 +113,42 @@ export default function NavigationTwo() {
                   </li>
                   <li>
                     <NavigationLink
-                      href={"/option-2" as any}
+                      href={"/rubber-mulch" as any}
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     >
-                      Option 2
+                      Rubber Mulch
                     </NavigationLink>
                   </li>
                   <li>
                     <NavigationLink
-                      href={"/option-2" as any}
+                      href={"/metal-cord" as any}
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     >
-                      Option 3
+                      Metal Cord
                     </NavigationLink>
                   </li>
                   <li>
                     <NavigationLink
-                      href={"/option-2" as any}
+                      href={"/bead-ring" as any}
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     >
-                      Option 4
+                      Bead Ring
                     </NavigationLink>
                   </li>
                   <li>
                     <NavigationLink
-                      href={"/option-2" as any}
+                      href={"/textile-cord" as any}
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     >
-                      Option 5
+                      Textile Cord
+                    </NavigationLink>
+                  </li>
+                  <li>
+                    <NavigationLink
+                      href={"/overview" as any}
+                      className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    >
+                      Overview
                     </NavigationLink>
                   </li>
                 </ul>

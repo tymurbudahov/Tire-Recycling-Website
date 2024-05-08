@@ -1,5 +1,10 @@
 export default function OurProducts() {
-  const crumbRubberImage = "/mainPage/crumb-rubber.webp";
+  const crumbRubberImage = "/images/products/crumb-rubber.webp";
+  const rubberMulchImage = "/images/products/rubber-mulch.webp";
+  const metalCordImage = "/images/products/metal-cord-one.webp";
+  const textileCordImage = "/images/products/textile-cord.webp";
+  const beadRingImage = "/images/products/bead-ring.webp";
+  const overViewImage = "/images/products/crumb-rubber.webp";
 
   return (
     <section className="bg-white dark:bg-gray-900">
@@ -36,7 +41,7 @@ export default function OurProducts() {
             <div>
               <img
                 className="h-auto max-w-full rounded-md"
-                src={crumbRubberImage}
+                src={rubberMulchImage}
                 alt="image description"
               />
             </div>
@@ -52,7 +57,7 @@ export default function OurProducts() {
             <div>
               <img
                 className="h-auto max-w-full rounded-md"
-                src={crumbRubberImage}
+                src={metalCordImage}
                 alt="image description"
               />
             </div>
@@ -68,7 +73,7 @@ export default function OurProducts() {
             <div>
               <img
                 className="h-auto max-w-full rounded-md"
-                src={crumbRubberImage}
+                src={textileCordImage}
                 alt="image description"
               />
             </div>
@@ -84,7 +89,7 @@ export default function OurProducts() {
             <div>
               <img
                 className="h-auto max-w-full rounded-md"
-                src={crumbRubberImage}
+                src={beadRingImage}
                 alt="image description"
               />
             </div>

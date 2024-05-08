@@ -1,6 +1,6 @@
 const Gallery: React.FC = () => {
-  const one = "/images/example/55-crumb.webp";
-  const two = "/images/example/100-crumb.webp";
+  const one = "/images/products/55-crumb.webp";
+  const two = "/images/products/100-crumb.webp";
 
   return (
     <div className="container mx-auto px-4rounded">
