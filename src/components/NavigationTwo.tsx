@@ -32,7 +32,7 @@ export default function NavigationTwo() {
           className={`inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600 ${isOpen ? "transform rotate-90" : ""}`}
           aria-expanded={isOpen}
         >
-          <span className="sr-only">Open main menu</span>
+          <span className="sr-only">Our Products</span>
           <svg
             className="w-6 h-6 transition-transform duration-200"
             xmlns="http://www.w3.org/2000/svg"
@@ -65,6 +65,7 @@ export default function NavigationTwo() {
               <NavigationLink
                 href="/"
                 className="py-2 px-3 text-white bg-blue-700 rounded lg:bg-transparent lg:text-blue-700 lg:p-0 lg:dark:text-blue-500 dark:bg-blue-600 lg:dark:bg-transparent"
+                onClick={() => setIsDropdownOpen(false)}
               >
                 {t("home")}
               </NavigationLink>
@@ -73,6 +74,7 @@ export default function NavigationTwo() {
               <NavigationLink
                 href={"/about-us" as any}
                 className="py-2 px-3 text-white lg:bg-transparent lg:p-0 lg:dark:bg-transparent lg:hover:text-blue-700 lg:dark:hover:text-blue-500"
+                onClick={() => setIsDropdownOpen(false)}
               >
                 {t("about-us")}
               </NavigationLink>
@@ -107,6 +109,7 @@ export default function NavigationTwo() {
                     <NavigationLink
                       href={"/crumb-rubber" as any}
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      onClick={() => setIsDropdownOpen(false)}
                     >
                       Crumb Rubber
                     </NavigationLink>
@@ -115,6 +118,7 @@ export default function NavigationTwo() {
                     <NavigationLink
                       href={"/rubber-mulch" as any}
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      onClick={() => setIsDropdownOpen(false)}
                     >
                       Rubber Mulch
                     </NavigationLink>
@@ -123,6 +127,7 @@ export default function NavigationTwo() {
                     <NavigationLink
                       href={"/metal-cord" as any}
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      onClick={() => setIsDropdownOpen(false)}
                     >
                       Metal Cord
                     </NavigationLink>
@@ -131,6 +136,7 @@ export default function NavigationTwo() {
                     <NavigationLink
                       href={"/bead-ring" as any}
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      onClick={() => setIsDropdownOpen(false)}
                     >
                       Bead Ring
                     </NavigationLink>
@@ -139,6 +145,7 @@ export default function NavigationTwo() {
                     <NavigationLink
                       href={"/textile-cord" as any}
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      onClick={() => setIsDropdownOpen(false)}
                     >
                       Textile Cord
                     </NavigationLink>
@@ -147,6 +154,7 @@ export default function NavigationTwo() {
                     <NavigationLink
                       href={"/overview" as any}
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                      onClick={() => setIsDropdownOpen(false)}
                     >
                       Overview
                     </NavigationLink>
@@ -158,6 +166,7 @@ export default function NavigationTwo() {
               <NavigationLink
                 href={"/dispose-tires" as any}
                 className="py-2 px-3 text-white lg:bg-transparent lg:p-0 lg:dark:bg-transparent lg:hover:text-blue-700 lg:dark:hover:text-blue-500"
+                onClick={() => setIsDropdownOpen(false)}
               >
                 {t("dispose-tires")}
               </NavigationLink>
@@ -166,6 +175,7 @@ export default function NavigationTwo() {
               <NavigationLink
                 href={"/contact-us" as any}
                 className="py-2 px-3 text-white lg:bg-transparent lg:p-0 lg:dark:bg-transparent lg:hover:text-blue-700 lg:dark:hover:text-blue-500"
+                onClick={() => setIsDropdownOpen(false)}
               >
                 {t("contact-us")}
               </NavigationLink>
