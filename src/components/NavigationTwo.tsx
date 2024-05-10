@@ -66,28 +66,30 @@ export default function NavigationTwo() {
           className={`${isOpen ? "block" : "hidden"} w-full lg:block lg:w-auto transition-opacity duration-500 ease-in-out`}
         >
           <ul className="flex flex-col lg:flex-row items-center lg:space-x-8 rounded-lg bg-gray-50 lg:bg-white dark:bg-gray-800 lg:dark:bg-gray-900 dark:border-gray-700 p-6 lg:p-0 mt-4 lg:mt-0">
-            <li className="w-60 m-1 p-3 border-b sm:w-1/2 w-border-gray-300 dark:border-gray-600 lg:m-0 lg:border-0 lg:p-0 lg:w-auto">
-              <NavigationLink
-                href="/"
-                className="py-2 px-3 text-white bg-blue-700 rounded lg:bg-transparent lg:text-blue-700 lg:p-0 lg:dark:text-blue-500 dark:bg-blue-600 lg:dark:bg-transparent"
-                onClick={setClose}
-              >
-                {t("home")}
-              </NavigationLink>
-            </li>
-            <li className="w-60 m-1 p-3 border-b sm:w-1/2 w-border-gray-300 dark:border-gray-600 lg:m-0 lg:border-0 lg:p-0 lg:w-auto">
-              <NavigationLink
-                href={"/about-us" as any}
-                className="py-2 px-3 text-white lg:bg-transparent lg:p-0 lg:dark:bg-transparent lg:hover:text-blue-700 lg:dark:hover:text-blue-500"
-                onClick={setClose}
-              >
-                {t("about-us")}
-              </NavigationLink>
-            </li>
+            <NavigationLink href="/">
+              <li className="w-60 m-1 p-3 border-b w-border-gray-300 dark:border-gray-600 lg:m-0 lg:border-0 lg:p-0 lg:w-auto">
+                <p
+                  className="py-2 px-3 text-white text-center bg-blue-700 rounded lg:bg-transparent lg:text-blue-700 lg:p-0 lg:dark:text-blue-500 dark:bg-blue-600 lg:dark:bg-transparent"
+                  onClick={setClose}
+                >
+                  {t("home")}
+                </p>
+              </li>
+            </NavigationLink>
+            <NavigationLink href={"/about-us" as any}>
+              <li className="w-60 m-1 p-3 border-b w-border-gray-300 dark:border-gray-600 lg:m-0 lg:border-0 lg:p-0 lg:w-auto">
+                <p
+                  className="py-2 px-3 text-white text-center lg:bg-transparent lg:p-0 lg:dark:bg-transparent lg:hover:text-blue-700 lg:dark:hover:text-blue-500"
+                  onClick={setClose}
+                >
+                  {t("about-us")}
+                </p>
+              </li>
+            </NavigationLink>
             <li className="relative w-60 m-1 p-3 border-b sm:w-1/2 w-border-gray-300 dark:border-gray-600 lg:m-0 lg:border-0 lg:p-0 lg:w-auto">
               <button
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                className="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 lg:w-auto dark:text-white lg:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 lg:dark:hover:bg-transparent"
+                className="flex items-center justify-center w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 lg:w-auto dark:text-white lg:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 lg:dark:hover:bg-transparent"
               >
                 Our Products
                 <svg
@@ -107,7 +109,7 @@ export default function NavigationTwo() {
                 </svg>
               </button>
               <div
-                className={`${isDropdownOpen ? "block" : "hidden"} absolute z-10 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600 transition-opacity duration-500 ease-in-out`}
+                className={`${isDropdownOpen ? "block" : "hidden"} absolute left-1/2 transform -translate-x-1/2 text-center z-10 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600 transition-opacity duration-500 ease-in-out`}
               >
                 <ul className="py-1 text-sm text-gray-700 dark:text-gray-400">
                   <li>
@@ -167,24 +169,26 @@ export default function NavigationTwo() {
                 </ul>
               </div>
             </li>
-            <li className="w-60 m-1 p-3 border-b sm:w-1/2 w-border-gray-300 dark:border-gray-600 lg:m-0 lg:border-0 lg:p-0 lg:w-auto">
-              <NavigationLink
-                href={"/dispose-tires" as any}
-                className="py-2 px-3 text-white lg:bg-transparent lg:p-0 lg:dark:bg-transparent lg:hover:text-blue-700 lg:dark:hover:text-blue-500"
-                onClick={setClose}
-              >
-                {t("dispose-tires")}
-              </NavigationLink>
-            </li>
-            <li className="w-60 m-1 p-3 border-b sm:w-1/2 w-border-gray-300 dark:border-gray-600 lg:m-0 lg:border-0 lg:p-0 lg:w-auto">
-              <NavigationLink
-                href={"/contact-us" as any}
-                className="py-2 px-3 text-white lg:bg-transparent lg:p-0 lg:dark:bg-transparent lg:hover:text-blue-700 lg:dark:hover:text-blue-500"
-                onClick={setClose}
-              >
-                {t("contact-us")}
-              </NavigationLink>
-            </li>
+            <NavigationLink href={"/dispose-tires" as any}>
+              <li className="w-60 m-1 p-3 border-b sm:w-1/2 w-border-gray-300 dark:border-gray-600 lg:m-0 lg:border-0 lg:p-0 lg:w-auto">
+                <p
+                  className="py-2 px-3 text-white text-center lg:bg-transparent lg:p-0 lg:dark:bg-transparent lg:hover:text-blue-700 lg:dark:hover:text-blue-500"
+                  onClick={setClose}
+                >
+                  {t("dispose-tires")}
+                </p>
+              </li>
+            </NavigationLink>
+            <NavigationLink href={"/contact-us" as any}>
+              <li className="w-60 m-1 p-3 border-b sm:w-1/2 w-border-gray-300 dark:border-gray-600 lg:m-0 lg:border-0 lg:p-0 lg:w-auto">
+                <p
+                  className="py-2 px-3 text-white text-center lg:bg-transparent lg:p-0 lg:dark:bg-transparent lg:hover:text-blue-700 lg:dark:hover:text-blue-500"
+                  onClick={setClose}
+                >
+                  {t("contact-us")}
+                </p>
+              </li>
+            </NavigationLink>
             <LocaleSwitcher />
           </ul>
         </div>
