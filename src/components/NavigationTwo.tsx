@@ -86,7 +86,7 @@ export default function NavigationTwo() {
                 </p>
               </li>
             </NavigationLink>
-            <li className="relative w-60 m-1 p-3 border-b sm:w-1/2 w-border-gray-300 dark:border-gray-600 lg:m-0 lg:border-0 lg:p-0 lg:w-auto">
+            <li className="relative w-60 m-1 p-3 border-b w-border-gray-300 dark:border-gray-600 lg:m-0 lg:border-0 lg:p-0 lg:w-auto">
               <button
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                 className="flex items-center justify-center w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 lg:w-auto dark:text-white lg:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 lg:dark:hover:bg-transparent"
@@ -170,17 +170,17 @@ export default function NavigationTwo() {
               </div>
             </li>
             <NavigationLink href={"/dispose-tires" as any}>
-              <li className="w-60 m-1 p-3 border-b sm:w-1/2 w-border-gray-300 dark:border-gray-600 lg:m-0 lg:border-0 lg:p-0 lg:w-auto">
+              <li className="w-60 m-1 p-3 border-b w-border-gray-300 dark:border-gray-600 lg:m-0 lg:border-0 lg:p-0 lg:w-auto">
                 <p
                   className="py-2 px-3 text-white text-center lg:bg-transparent lg:p-0 lg:dark:bg-transparent lg:hover:text-blue-700 lg:dark:hover:text-blue-500"
                   onClick={setClose}
                 >
-                  {t("dispose-tires")}
+                  Dispose Tires
                 </p>
               </li>
             </NavigationLink>
             <NavigationLink href={"/contact-us" as any}>
-              <li className="w-60 m-1 p-3 border-b sm:w-1/2 w-border-gray-300 dark:border-gray-600 lg:m-0 lg:border-0 lg:p-0 lg:w-auto">
+              <li className="w-60 m-1 p-3 border-b w-border-gray-300 dark:border-gray-600 lg:m-0 lg:border-0 lg:p-0 lg:w-auto">
                 <p
                   className="py-2 px-3 text-white text-center lg:bg-transparent lg:p-0 lg:dark:bg-transparent lg:hover:text-blue-700 lg:dark:hover:text-blue-500"
                   onClick={setClose}
