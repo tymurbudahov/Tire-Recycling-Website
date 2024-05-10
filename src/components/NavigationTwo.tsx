@@ -10,6 +10,11 @@ export default function NavigationTwo() {
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
+  const setClose = () => {
+    setIsOpen(false);
+    setIsDropdownOpen(false);
+  };
+
   return (
     <nav className="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
       <div className="max-w-screen-lg flex flex-wrap items-center justify-between mx-auto p-4">
@@ -60,26 +65,26 @@ export default function NavigationTwo() {
         <div
           className={`${isOpen ? "block" : "hidden"} w-full lg:block lg:w-auto transition-opacity duration-500 ease-in-out`}
         >
-          <ul className="flex flex-col lg:flex-row items-center lg:space-x-8 rounded-lg bg-gray-50 lg:bg-white dark:bg-gray-800 lg:dark:bg-gray-900 dark:border-gray-700 p-4 lg:p-0 mt-4 lg:mt-0">
-            <li>
+          <ul className="flex flex-col lg:flex-row items-center lg:space-x-8 rounded-lg bg-gray-50 lg:bg-white dark:bg-gray-800 lg:dark:bg-gray-900 dark:border-gray-700 p-6 lg:p-0 mt-4 lg:mt-0">
+            <li className="w-60 m-1 p-3 border-b sm:w-1/2 w-border-gray-300 dark:border-gray-600 lg:m-0 lg:border-0 lg:p-0 lg:w-auto">
               <NavigationLink
                 href="/"
                 className="py-2 px-3 text-white bg-blue-700 rounded lg:bg-transparent lg:text-blue-700 lg:p-0 lg:dark:text-blue-500 dark:bg-blue-600 lg:dark:bg-transparent"
-                onClick={() => setIsDropdownOpen(false)}
+                onClick={setClose}
               >
                 {t("home")}
               </NavigationLink>
             </li>
-            <li>
+            <li className="w-60 m-1 p-3 border-b sm:w-1/2 w-border-gray-300 dark:border-gray-600 lg:m-0 lg:border-0 lg:p-0 lg:w-auto">
               <NavigationLink
                 href={"/about-us" as any}
                 className="py-2 px-3 text-white lg:bg-transparent lg:p-0 lg:dark:bg-transparent lg:hover:text-blue-700 lg:dark:hover:text-blue-500"
-                onClick={() => setIsDropdownOpen(false)}
+                onClick={setClose}
               >
                 {t("about-us")}
               </NavigationLink>
             </li>
-            <li className="relative">
+            <li className="relative w-60 m-1 p-3 border-b sm:w-1/2 w-border-gray-300 dark:border-gray-600 lg:m-0 lg:border-0 lg:p-0 lg:w-auto">
               <button
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                 className="flex items-center justify-between w-full py-2 px-3 text-gray-900 rounded hover:bg-gray-100 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 lg:w-auto dark:text-white lg:dark:hover:text-blue-500 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 lg:dark:hover:bg-transparent"
@@ -109,7 +114,7 @@ export default function NavigationTwo() {
                     <NavigationLink
                       href={"/crumb-rubber" as any}
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      onClick={() => setIsDropdownOpen(false)}
+                      onClick={setClose}
                     >
                       Crumb Rubber
                     </NavigationLink>
@@ -118,7 +123,7 @@ export default function NavigationTwo() {
                     <NavigationLink
                       href={"/rubber-mulch" as any}
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      onClick={() => setIsDropdownOpen(false)}
+                      onClick={setClose}
                     >
                       Rubber Mulch
                     </NavigationLink>
@@ -127,7 +132,7 @@ export default function NavigationTwo() {
                     <NavigationLink
                       href={"/metal-cord" as any}
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      onClick={() => setIsDropdownOpen(false)}
+                      onClick={setClose}
                     >
                       Metal Cord
                     </NavigationLink>
@@ -136,7 +141,7 @@ export default function NavigationTwo() {
                     <NavigationLink
                       href={"/bead-ring" as any}
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      onClick={() => setIsDropdownOpen(false)}
+                      onClick={setClose}
                     >
                       Bead Ring
                     </NavigationLink>
@@ -145,7 +150,7 @@ export default function NavigationTwo() {
                     <NavigationLink
                       href={"/textile-cord" as any}
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      onClick={() => setIsDropdownOpen(false)}
+                      onClick={setClose}
                     >
                       Textile Cord
                     </NavigationLink>
@@ -154,7 +159,7 @@ export default function NavigationTwo() {
                     <NavigationLink
                       href={"/overview" as any}
                       className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                      onClick={() => setIsDropdownOpen(false)}
+                      onClick={setClose}
                     >
                       Overview
                     </NavigationLink>
@@ -162,20 +167,20 @@ export default function NavigationTwo() {
                 </ul>
               </div>
             </li>
-            <li>
+            <li className="w-60 m-1 p-3 border-b sm:w-1/2 w-border-gray-300 dark:border-gray-600 lg:m-0 lg:border-0 lg:p-0 lg:w-auto">
               <NavigationLink
                 href={"/dispose-tires" as any}
                 className="py-2 px-3 text-white lg:bg-transparent lg:p-0 lg:dark:bg-transparent lg:hover:text-blue-700 lg:dark:hover:text-blue-500"
-                onClick={() => setIsDropdownOpen(false)}
+                onClick={setClose}
               >
                 {t("dispose-tires")}
               </NavigationLink>
             </li>
-            <li>
+            <li className="w-60 m-1 p-3 border-b sm:w-1/2 w-border-gray-300 dark:border-gray-600 lg:m-0 lg:border-0 lg:p-0 lg:w-auto">
               <NavigationLink
                 href={"/contact-us" as any}
                 className="py-2 px-3 text-white lg:bg-transparent lg:p-0 lg:dark:bg-transparent lg:hover:text-blue-700 lg:dark:hover:text-blue-500"
-                onClick={() => setIsDropdownOpen(false)}
+                onClick={setClose}
               >
                 {t("contact-us")}
               </NavigationLink>
