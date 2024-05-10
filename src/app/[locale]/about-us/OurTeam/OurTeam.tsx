@@ -1,7 +1,7 @@
 const OurTeam: React.FC = () => {
   return (
-    <section className="bg-gray-100 dark:bg-gray-900 lg:py-12 lg:flex lg:justify-center">
-      <div className="overflow-hidden bg-white dark:bg-gray-900 lg:mx-8 lg:flex lg:max-w-6xl lg:w-full">
+    <section className=" bg-gray-900 lg:py-12 lg:flex lg:justify-center">
+      <div className="overflow-hidden  bg-gray-900 lg:mx-8 lg:flex lg:max-w-6xl lg:w-full">
         <div className="lg:w-1/2">
           <div
             className="h-64 bg-cover lg:h-full"
@@ -13,11 +13,11 @@ const OurTeam: React.FC = () => {
         </div>
 
         <div className="max-w-xl px-6 py-12 lg:max-w-5xl lg:w-1/2">
-          <h2 className="text-2xl font-semibold text-gray-800 dark:text-white md:text-3xl">
+          <h2 className="text-2xl font-semibold  text-white md:text-3xl">
             Our <span className="text-blue-500">Team</span>
           </h2>
 
-          <p className="mt-4 text-gray-500 dark:text-gray-300">
+          <p className="mt-4 text-gray-300">
             Engineers, designers and environmentalists with a deep understanding
             of the tire industry. Our team is strengthened by young, ambitious
             specialists, distinguished by an innovative approach. We value
