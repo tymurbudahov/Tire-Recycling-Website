@@ -91,7 +91,7 @@ export default function NavigationTwo() {
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                 className="flex items-center justify-center w-full py-2 px-3 rounded lg:border-0 lg:p-0 lg:w-auto text-white lg:hover:text-blue-500 focus:text-white border-gray-700 hover:bg-gray-700 lg:hover:bg-transparent"
               >
-                Our Products
+                {t("our-products")}
                 <svg
                   className="w-2.5 h-2.5 ml-2"
                   aria-hidden="true"
@@ -118,7 +118,7 @@ export default function NavigationTwo() {
                       className="block px-4 py-2 hover:bg-gray-600 hover:text-white"
                       onClick={setClose}
                     >
-                      Crumb Rubber
+                      {t("crumb-rubber")}
                     </NavigationLink>
                   </li>
                   <li>
@@ -127,7 +127,7 @@ export default function NavigationTwo() {
                       className="block px-4 py-2  hover:bg-gray-600 hover:text-white"
                       onClick={setClose}
                     >
-                      Rubber Mulch
+                      {t("rubber-mulch")}
                     </NavigationLink>
                   </li>
                   <li>
@@ -136,7 +136,7 @@ export default function NavigationTwo() {
                       className="block px-4 py-2 hover:bg-gray-600 hover:text-white"
                       onClick={setClose}
                     >
-                      Metal Cord
+                      {t("metal-cord")}
                     </NavigationLink>
                   </li>
                   <li>
@@ -145,7 +145,7 @@ export default function NavigationTwo() {
                       className="block px-4 py-2 hover:bg-gray-600 hover:text-white"
                       onClick={setClose}
                     >
-                      Bead Ring
+                      {t("bead-ring")}
                     </NavigationLink>
                   </li>
                   <li>
@@ -154,16 +154,7 @@ export default function NavigationTwo() {
                       className="block px-4 py-2 hover:bg-gray-600 hover:text-white"
                       onClick={setClose}
                     >
-                      Textile Cord
-                    </NavigationLink>
-                  </li>
-                  <li>
-                    <NavigationLink
-                      href={"/overview" as any}
-                      className="block px-4 py-2 hover:bg-gray-600 hover:text-white"
-                      onClick={setClose}
-                    >
-                      Overview
+                      {t("textile-cord")}
                     </NavigationLink>
                   </li>
                 </ul>
@@ -175,7 +166,7 @@ export default function NavigationTwo() {
                   className="py-2 px-3 text-white text-center lg:p-0 lg:bg-transparent lg:hover:text-blue-500"
                   onClick={setClose}
                 >
-                  Dispose Tires
+                  {t("dispose-tires")}
                 </p>
               </li>
             </NavigationLink>

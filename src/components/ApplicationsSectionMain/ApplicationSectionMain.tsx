@@ -1,29 +1,22 @@
+import { useTranslations } from "next-intl";
+
 export default function ApplicationSectionMain() {
+  const t = useTranslations("IndexPage");
+
   return (
     <section className=" bg-gray-900">
       <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
         <div className="max-w-screen-lg sm:text-lg text-gray-400">
           <h2 className="mb-4 text-4xl tracking-tight font-bold  text-white">
-            Powering innovation at{" "}
-            <span className="font-extrabold">200,000+</span> companies worldwide
+            {t("title-two")}
           </h2>
-          <p className="mb-4 font-light">
-            Track work across the enterprise through an open, collaborative
-            platform. Link issues across Jira and ingest data from other
-            software development tools, so your IT support and operations teams
-            have richer contextual information to rapidly respond to requests,
-            incidents, and changes.
-          </p>
-          <p className="mb-4 font-medium">
-            Deliver great service experiences fast - without the complexity of
-            traditional ITSM solutions.Accelerate critical development work,
-            eliminate toil, and deploy changes with ease.
-          </p>
+          <p className="mb-4 font-light">{t("title-two-description")}</p>
+          <p className="mb-4 font-medium">{t("title-two-description-two")}</p>
           <a
             href="#"
             className="inline-flex items-center font-medium text-primary-600 hover:text-primary-800 text-primary-500 hover:text-primary-700"
           >
-            Learn more
+            {t("title-two-button")}
             <svg
               className="ml-1 w-6 h-6"
               fill="currentColor"

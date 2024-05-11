@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { useTranslations } from "next-intl";
 
 const SubEmail: React.FC = () => {
   const [email, setEmail] = useState("");
@@ -10,12 +11,14 @@ const SubEmail: React.FC = () => {
     console.log("Submitted email:", email);
   };
 
+  const t = useTranslations("IndexPage");
+
   return (
     <section className=" bg-gray-900">
       <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
         <div className="mx-auto max-w-screen-md sm:text-center">
           <h2 className="mb-4 text-3xl tracking-tight font-extrabold  sm:text-4xl text-white">
-            Sign up for our newsletter
+            Sho
           </h2>
           <p className="mx-auto mb-8 max-w-2xl font-light  md:mb-12 sm:text-xl text-gray-400">
             Stay up to date with the roadmap progress, announcements and
