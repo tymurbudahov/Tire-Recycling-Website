@@ -5,7 +5,7 @@ export default function Page() {
   return (
     <section>
       <Information />
-      <ContactForm />
+      {/* <ContactForm /> */}
     </section>
   );
 }

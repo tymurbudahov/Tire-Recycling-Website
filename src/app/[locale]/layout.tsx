@@ -9,7 +9,7 @@ import { ReactNode } from "react";
 import Navigation from "@/components/Navigation";
 import { locales } from "@/config";
 import Footer from "@/components/Footer/Footer";
-import { NextIntlClientProvider } from "next-intl";
+// import { NextIntlClientProvider } from "next-intl";
 import NavigationTwo from "@/components/NavigationTwo";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -49,12 +49,10 @@ export default async function LocaleLayout({
       <body
         className={clsx(inter.className, "flex h-full flex-col bg-gray-900")}
       >
-        <NextIntlClientProvider messages={messages}>
-          <Navigation />
-          {children}
-          {/* Getting error with fill-rule in footer component */}
-          <Footer />
-        </NextIntlClientProvider>
+        <Navigation />
+        {children}
+        {/* Getting error with fill-rule in footer component */}
+        <Footer />
       </body>
     </html>
   );

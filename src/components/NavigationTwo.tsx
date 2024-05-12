@@ -79,7 +79,7 @@ export default function NavigationTwo() {
             <NavigationLink href={"/about-us" as any}>
               <li className="w-60 m-1 p-3 border-b w-border-gray-300 border-gray-600 lg:m-0 lg:border-0 lg:p-0 lg:w-auto">
                 <p
-                  className="py-2 px-3 text-white text-center lg:p-0 lg:bg-transparent lg:hover:text-blue-500 hover:bg-gray-700"
+                  className="py-2 px-3 text-white text-center lg:p-0 lg:bg-transparent lg:hover:text-blue-500"
                   onClick={setClose}
                 >
                   {t("about-us")}
@@ -163,7 +163,7 @@ export default function NavigationTwo() {
             <NavigationLink href={"/dispose-tires" as any}>
               <li className="w-60 m-1 p-3 border-b w-border-gray-300 border-gray-600 lg:m-0 lg:border-0 lg:p-0 lg:w-auto">
                 <p
-                  className="py-2 px-3 text-white text-center lg:p-0 lg:bg-transparent lg:hover:text-blue-500 hover:bg-gray-700"
+                  className="py-2 px-3 text-white text-center lg:p-0 lg:bg-transparent lg:hover:text-blue-500"
                   onClick={setClose}
                 >
                   {t("dispose-tires")}
@@ -173,7 +173,7 @@ export default function NavigationTwo() {
             <NavigationLink href={"/contact-us" as any}>
               <li className="w-60 m-1 p-3 border-b w-border-gray-300 border-gray-600 lg:m-0 lg:border-0 lg:p-0 lg:w-auto">
                 <p
-                  className="py-2 px-3 text-white text-center lg:p-0 lg:bg-transparent lg:hover:text-blue-500 hover:bg-gray-700"
+                  className="py-2 px-3 text-white text-center lg:p-0 lg:bg-transparent lg:hover:text-blue-500"
                   onClick={setClose}
                 >
                   {t("contact-us")}
