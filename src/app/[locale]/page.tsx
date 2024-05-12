@@ -29,7 +29,7 @@ export default function IndexPage({ params: { locale } }: Props) {
       <ApplicationSectionMain />
 
       {/* Subscribe to email list */}
-      {/* <SubEmail /> */}
+      <SubEmail />
     </>
   );
 }

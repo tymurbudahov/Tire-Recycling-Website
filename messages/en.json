@@ -12,6 +12,7 @@
     "dispose-tires": "Dispose Tires",
     "contact-us": "Contact Us"
   },
+
   "IndexPage": {
     "title": "Tire Recycling UA",
     "title-text-one": "Saving nature, tire by tire. We are your reliable partner in recycling used tires in Ukraine. Over 210,000 tons of used tires pollute our country every year, we strive to reduce this number by recycling every tire to protect and restore our ecology. Together we can create a clean and green future for Ukraine.",
@@ -42,31 +43,218 @@
     "email-title": "Sign up for our newsletter",
     "email-description": "Stay up to date with the roadmap progress, announcements and exclusive discounts feel free to sign up with your email.",
     "email-enter": "Enter your email",
-    "email-subscribe": "Subscribe"
+    "email-subscribe": "Sign up for our newsletter",
+    "email-subscribe-description": "Stay up to date with the roadmap progress, announcements and exclusive discounts feel free to sign up with your email.",
+    "email-subscribe-inside": " Enter your email",
+    "email-subscribe-button": "Subscribe"
   },
+
+  "AboutUsPage": {
+    "about-title": "About Us",
+    "about-description": "At Tire Recycling UA, we transform an environmental problem into a sustainable solution. With an annual volume of 210 thousand tons of waste tires, our mission is to increase recycling rates from the current 7!! thousand tons and promote an environmentally responsible approach. As the market leader in Ukraine, we already recycle more than 15,000 tons of tires per year, helping to avoid environmental pollution and reduce waste generation. With investments in the latest technology and capacity expansion, we are committed to achieving the goal of complete recycling of all used tires in the country.",
+    "about-title-button": "Learn more",
+    "stat-title": "Trusted by eCommerce Businesses",
+    "stat-description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione dolores laborum labore provident impedit esse recusandae facere libero harum sequi.",
+    "stat-one": "Total Sales",
+    "stat-two": "Official Addons",
+    "stat-three": "Total Addons",
+    "our-history-title": "History",
+    "our-history-description": "What happens to worn tires? This issue forced us, tire manufacturers in Ukraine, to look for ways to effectively dispose them. In 2019 we developed!!or found!! an environmentally friendly process for recycling tires into secondary raw materials. Since 2021, we have been actively pursuing our mission to return used tires back into the life cycle with minimal impact on the environment.",
+    "our-text": "Our",
+    "our-goals-title-one": "Goals",
+    "our-goals-description": "Every year we increase the scale of recycling, expanding the possibilities for reusing rubber. Our strategic plan includes launching new processing plants throughout Ukraine, making recycling easily accessible to every corner of the country. We strive to make tire disposal a daily practice, supported by public organizations and active citizens. In collaboration with local authorities and communities, we aim to develop a comprehensive network of tire collection points. This will make it easier for every resident and business to recycle their used tires, helping to protect the environment.",
+    "our-team-title": "Team",
+    "our-team-description": "Engineers, designers and environmentalists with a deep understanding of the tire industry. Our team is strengthened by young, ambitious specialists, distinguished by an innovative approach. We value teamwork and maintain high standards in everything we do. Together, these talented professionals form the strong core of our company, advancing the development of sustainable tire recycling solutions for the benefit of society and the environment.",
+    "what-we-do-title": "What We Do",
+    "what-we-do-description": "Our services cover the acceptance of used tires from businesses and individuals without restrictions on quantity. We process these tires into valuable raw materials - rubber granules, which are widely used in the production of a variety of rubber products. In the near future, we will expand the network of tire collection points to simplify recycling anywhere in Ukraine.",
+    "applications-title": "Applications",
+    "applications-title-description": "Recycled tires are turned into valuable raw materials used in many industries. These raw materials serve as the basis for the production of a variety of rubber products, flooring and more. Rubberized asphalt, created using crumb rubber, has improved performance characteristics. Recycled tire materials are also widely used in creating safe and durable playgrounds and as landscape mulch to retain moisture and prevent weed growth. In sports facilities they are used as shock-absorbing coatings that increase the safety and comfort of athletes.",
+    "item-one-title": "Rubber Products",
+    "item-one-description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo possimus adipisci distinctio alias voluptatum blanditiis laudantium.",
+    "item-two-title": "Playgrounds",
+    "item-two-description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo possimus adipisci distinctio alias voluptatum blanditiis laudantium.",
+    "item-three-title": "Rubber Mulch",
+    "item-three-description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo possimus adipisci distinctio alias voluptatum blanditiis laudantium.",
+    "item-four-title": "Rubberized Asphalt",
+    "item-four-description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo possimus adipisci distinctio alias voluptatum blanditiis laudantium.",
+    "item-five-title": "Sport Coverings",
+    "item-five-description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo possimus adipisci distinctio alias voluptatum blanditiis laudantium.",
+    "item-six-title": "Rubber Mats",
+    "item-six-description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo possimus adipisci distinctio alias voluptatum blanditiis laudantium.",
+    "item-seven-title": "Rubber Tiles",
+    "item-seven-description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo possimus adipisci distinctio alias voluptatum blanditiis laudantium.",
+    "item-eight-title": "Football Coverings",
+    "item-eight-description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo possimus adipisci distinctio alias voluptatum blanditiis laudantium.",
+    "item-nine-title": "Rubber Barriers",
+    "item-nine-description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo possimus adipisci distinctio alias voluptatum blanditiis laudantium."
+  },
+
+  "CrumbRubberPage": {
+    "crumb-rubber-title": "Crumb Rubber",
+    "crumb-rubber-description-one": "Rubber granules, produced by shredding used tires, are a versatile product suitable for a wide range of industrial applications. With the ability to produce fractions down to 0.55 mm, our crumb rubber is ideal for creating safe sports surfaces, effective sound insulation materials and durable road surface elements. Our rubber granule production meets the strictest quality and environmental standards, providing customers with a reliable and sustainable product for their projects.",
+    "crumb-rubber-description-two": "We offer high quality crumb rubber with particle sizes down to 0.55mm, ideal for a variety of industrial and commercial applications.",
+    "rubberized-asphalt-one": "Rubberized asphalt",
+    "rubberized-asphalt-description": "Rubberized asphalt concrete is an advanced road surface that combines standard asphalt concrete with the addition of rubber granules made from recycled car tires. These granules, occupying from 15% to 22% of the volume of the road mixture, improve the characteristics of asphalt, making it more elastic and resistant to various weather conditions. Using rubberized asphalt is a time-tested practice that has been used for over four decades. This material does not require specialized equipment for installation, which makes it convenient to use on a par with traditional asphalt mixtures.",
+    "sport-coverings-title": "Sport coverings",
+    "sport-coverings-description": "Sports surfaces made from rubber granules are an ideal solution for creating safe and comfortable sports fields. These surfaces have excellent shock absorption, which reduces the risk of injury for athletes. In addition, they provide excellent grip and can be adapted for a variety of sports, from athletics to football and basketball. Rubber granules make the surface resistant to changing weather conditions, as well as being easy to maintain and durable, making them a cost-effective choice for sports facilities.",
+    "contact-title": "We offer best products to our customers",
+    "contact-description-one": "We offer high quality rubber granules on the market. Flowbite helps you connect with friends, family and communities of people who share your interests. Connecting with your friends and family as well as discovering new ones is easy with features like Groups, Watch and Marketplace.",
+    "contact-description-two": "Interested?",
+    "contact-button": "Contact Us"
+  },
+
+  "RubberMulchPage": {
+    "rubber-mulch-title": "Rubber Mulch",
+    "rubber-mulch-description-one": "Using rubber mulch made from recycled tires is an eco-innovative solution for landscaping, children's playgrounds and sports fields. This material not only performs all the functions of traditional wood mulch, but also surpasses it, providing durability, safety and low maintenance requirements. Rubber mulch is highly weather-resistant, does not attract pests, and retains its color for many years, making it an ideal choice for any landscaping project.",
+    "rubber-mulch-description-two": "We offer high quality rubber mulch with a lot of different applications.",
+    "applications-title": "Applications",
+    "applications-title-description": "Recycled tires are turned into valuable raw materials used in many industries. These raw materials serve as the basis for the production of a variety of rubber products, flooring and more. Rubberized asphalt, created using crumb rubber, has improved performance characteristics. Recycled tire materials are also widely used in creating safe and durable playgrounds and as landscape mulch to retain moisture and prevent weed growth. In sports facilities they are used as shock-absorbing coatings that increase the safety and comfort of athletes.",
+    "item-one-title": "Rubber Products",
+    "item-one-description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo possimus adipisci distinctio alias voluptatum blanditiis laudantium.",
+    "item-two-title": "Playgrounds",
+    "item-two-description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo possimus adipisci distinctio alias voluptatum blanditiis laudantium.",
+    "item-three-title": "Rubber Mulch",
+    "item-three-description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo possimus adipisci distinctio alias voluptatum blanditiis laudantium.",
+    "item-four-title": "Rubberized Asphalt",
+    "item-four-description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo possimus adipisci distinctio alias voluptatum blanditiis laudantium.",
+    "item-five-title": "Sport Coverings",
+    "item-five-description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo possimus adipisci distinctio alias voluptatum blanditiis laudantium.",
+    "item-six-title": "Rubber Mats",
+    "item-six-description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo possimus adipisci distinctio alias voluptatum blanditiis laudantium.",
+    "item-seven-title": "Rubber Tiles",
+    "item-seven-description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo possimus adipisci distinctio alias voluptatum blanditiis laudantium.",
+    "item-eight-title": "Football Coverings",
+    "item-eight-description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo possimus adipisci distinctio alias voluptatum blanditiis laudantium.",
+    "item-nine-title": "Rubber Barriers",
+    "item-nine-description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo possimus adipisci distinctio alias voluptatum blanditiis laudantium.",
+    "house-landscape-title": "Landscape for your house",
+    "house-landscape-description": "Rubber mulch is an environmentally sustainable alternative to wood mulch that offers improved durability and wind resistance due to its weight. This material effectively passes rainwater to plant roots without retaining it and does not attract termites, making it safe for landscaping. Rubber mulch is an investment in the long-term beauty of your garden: it does not require annual replacement and retains its vibrant color for a decade, unlike wood mulch, which quickly deteriorates when exposed to the elements.",
+    "coating-title": "Coating for playgrounds",
+    "coating-description": "Rubber playground mulch is a safe, durable surface designed to provide maximum protection and comfort. Made from recycled car tires, this material is an excellent choice for any play area due to its impact-absorbing properties that reduce the risk of injury from falls.",
+    "contact-title": "We offer best products to our customers",
+    "contact-description-one": "We offer high quality rubber granules on the market. Flowbite helps you connect with friends, family and communities of people who share your interests. Connecting with your friends and family as well as discovering new ones is easy with features like Groups, Watch and Marketplace.",
+    "contact-description-two": "Interested?",
+    "contact-button": "Contact Us"
+  },
+
+  "MetalCordPage": {
+    "metal-cord-title": "Metal Cord",
+    "metal-cord-description": "Metal cord is a steel wire that strengthens tires and gives them structural integrity. After the tire's life cycle, this cord is recovered through recycling and can be reused or melted down to create new steel products. Metal cord is a valuable recycling material because steel is easily recyclable and has a wide range of applications in a variety of industries, from construction to the production of new metal products.",
+    "contact-title": "We offer best products to our customers",
+    "contact-description-one": "We offer high quality rubber granules on the market. Flowbite helps you connect with friends, family and communities of people who share your interests. Connecting with your friends and family as well as discovering new ones is easy with features like Groups, Watch and Marketplace.",
+    "contact-description-two": "Interested?",
+    "contact-button": "Contact Us"
+  },
+
+  "BeadRingPage": {
+    "bead-ring-title": "Bead Ring",
+    "bead-ring-description": "The bead ring is a reinforced element of the tire that ensures reliable fixation of the tire on the wheel rim. After the tire's life, the bead ring is removed during recycling and can be recycled into new products such as O-rings and protective rims. It is a valuable resource for the recycling industry as it contains quality materials that promote sustainable production and waste minimization.",
+    "contact-title": "We offer best products to our customers",
+    "contact-description-one": "We offer high quality rubber granules on the market. Flowbite helps you connect with friends, family and communities of people who share your interests. Connecting with your friends and family as well as discovering new ones is easy with features like Groups, Watch and Marketplace.",
+    "contact-description-two": "Interested?",
+    "contact-button": "Contact Us"
+  },
+
+  "TextileCordPage": {
+    "bead-ring-title": "Textile Cord",
+    "bead-ring-description": "Textile cord is a fibrous material that is part of the tire carcass and gives it strength and flexibility. After tire wear, textile cord can be separated and used as a secondary raw material in various industries, such as in construction to strengthen mortars, in the production of nonwovens, or as filler for car mats and seats. Recycling textile cord helps reduce waste.",
+    "contact-title": "We offer best products to our customers",
+    "contact-description-one": "We offer high quality rubber granules on the market. Flowbite helps you connect with friends, family and communities of people who share your interests. Connecting with your friends and family as well as discovering new ones is easy with features like Groups, Watch and Marketplace.",
+    "contact-description-two": "Interested?",
+    "contact-button": "Contact Us"
+  },
+
+  "DisposeTiresPage": {
+    "dispose-tires-title": "Dispose Tires",
+    "dispose-tires-description": "You have used tires that you want to dispose? Please, complete this form and we will help you.",
+    "form": {
+      "name-up": "Name",
+      "name-inside": "Name *",
+      "email-up": "Email",
+      "email-inside": "Your email *",
+      "phone-up": "Phone",
+      "phoene-inside": "text",
+      "company-up": "Company",
+      "company-inside": "text",
+      "tire-type-up": "Tire Type",
+      "tire-type-inside": "What tire type you have? (Passenger tire, truck tire, etc.)",
+      "tire-quantity-up": "How many tires do you have?",
+      "location-up": "Location",
+      "location-inside": "City or region",
+      "delivery-up": "Do you have vehicle to deliver tires to the collection point?",
+      "additional-comments-up": "Additional comments",
+      "additional-comments-inside": "Type here if you have any additional questions or comments",
+      "send-message": "Send Message",
+      "message-success": "Your message sent, thank you!",
+      "message-error": "Hmm... Some error occured, please refresh page and try again."
+    }
+  },
+
+  "ContactUsPage": {
+    "contact-us-title": "Contact Us",
+    "contact-us-description": "We will be happy to assist you with any question you have.",
+    "phone-title": "Phone",
+    "email-title": "Email",
+    "address-title": "Address",
+    "fill-up-form-title": "Or fill up this form",
+    "fill-up-form-description": "Our representative will contact you as soon as possible.",
+    "form": {
+      "name-up": "Your name",
+      "name-inside": "Name",
+      "email-up": "Email",
+      "email-inside": "name@example.com",
+      "phone-up": "Phone",
+      "phone-inside": "",
+      "message-up": "Your message",
+      "message-inside": "Leave a comment...",
+      "send-message": "Send Message",
+      "message-success": "Your message sent, thank you!",
+      "message-error": "Hmm... Some error occured, please refresh page and try again."
+    }
+  },
+
+  "Footer": {
+    "who-are-we": "Who are we",
+    "who-are-we-home": "Home",
+    "who-are-we-about-us": "About Us",
+    "our-products": "Our products",
+    "our-products-crumb-rubber": "Crumb Rubber",
+    "our-products-rubber-mulch": "Rubber Mulch",
+    "contact": "Contact",
+    "contact-dispose-tires": "Dispose Tires",
+    "contact-us": "Contact Us",
+    "all-rights-reserved": ". All Rights Reserved."
+  },
+
   "PathnamesPage": {
     "title": "Pathnames",
     "description": "<p>The pathnames are internationalized too.</p><p>If you're using the default language English, you'll see <code>/en/pathnames</code> in the browser address bar on this page.</p><p>If you change the locale to German, the URL is localized accordingly (<code>/de/pfadnamen</code>).</p>"
   },
+
   "Error": {
     "title": "Something went wrong!",
     "description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>"
   },
+
   "NotFoundPage": {
     "title": "Page not found",
     "description": "Please double-check the browser address bar or use the navigation to go to a known page."
   },
+
   "LocaleLayout": {
     "title": "next-intl example"
   },
+
   "LocaleSwitcher": {
     "label": "Change language",
     "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} other {Unknown}}"
   },
+
   "Navigation": {
     "home": "Home",
     "pathnames": "Pathnames"
   },
+
   "PageLayout": {
     "links": {
       "docs": {

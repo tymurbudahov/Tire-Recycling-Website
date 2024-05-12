@@ -1,6 +1,9 @@
+import { useTranslations } from "next-intl";
+
 const Applications: React.FC = () => {
   const one = "/images/example/55-crumb.webp";
   const two = "/images/example/100-crumb.webp";
+  const t = useTranslations("CrumbRubberPage");
 
   return (
     <div className=" bg-gray-900 mt-10">
@@ -18,19 +21,10 @@ const Applications: React.FC = () => {
         />
         <div className="mt-4 md:mt-0">
           <h2 className="mb-4 text-4xl tracking-tight font-extrabold  text-white sm:text-3xl">
-            Rubberized asphalt
+            {t("rubberized-asphalt-one")}
           </h2>
           <p className="mb-6 font-light md:text-lg text-gray-400 sm:text-base">
-            Rubberized asphalt concrete is an advanced road surface that
-            combines standard asphalt concrete with the addition of rubber
-            granules made from recycled car tires. These granules, occupying
-            from 15% to 22% of the volume of the road mixture, improve the
-            characteristics of asphalt, making it more elastic and resistant to
-            various weather conditions. Using rubberized asphalt is a
-            time-tested practice that has been used for over four decades. This
-            material does not require specialized equipment for installation,
-            which makes it convenient to use on a par with traditional asphalt
-            mixtures.
+            {t("rubberized-asphalt-description")}
           </p>
         </div>
       </div>
@@ -49,17 +43,10 @@ const Applications: React.FC = () => {
         />
         <div className="mt-4 md:mt-0">
           <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-white sm:text-3xl">
-            Sport coverings
+            {t("sport-coverings-title")}
           </h2>
           <p className="mb-6 font-light md:text-lg text-gray-400 sm:text-base">
-            Sports surfaces made from rubber granules are an ideal solution for
-            creating safe and comfortable sports fields. These surfaces have
-            excellent shock absorption, which reduces the risk of injury for
-            athletes. In addition, they provide excellent grip and can be
-            adapted for a variety of sports, from athletics to football and
-            basketball. Rubber granules make the surface resistant to changing
-            weather conditions, as well as being easy to maintain and durable,
-            making them a cost-effective choice for sports facilities.
+            {t("sport-coverings-description")}
           </p>
         </div>
       </div>

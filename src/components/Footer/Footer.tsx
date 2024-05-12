@@ -1,78 +1,89 @@
+import { useTranslations } from "next-intl";
+import NavigationLink from "../NavigationLink";
+
 export default function Footer() {
+  const t = useTranslations("Footer");
+
   return (
     <footer className="bg-gray-900">
-      <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+      <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8 mt-5">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
-            <a href="https://flowbite.com/" className="flex items-center">
+            <NavigationLink href={"/" as any} className="flex items-center">
               <img
                 src="https://flowbite.com/docs/images/logo.svg"
                 className="h-8 me-3"
-                alt="FlowBite Logo"
+                alt="Tire Recycling UA Logo"
               />
               <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
-                Flowbite
+                Tire Recycling UA
               </span>
-            </a>
+            </NavigationLink>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
               <h2 className="mb-6 text-sm font-semibold uppercase text-white">
-                Resources
+                {t("who-are-we")}
               </h2>
               <ul className=" text-gray-400 font-medium">
                 <li className="mb-4">
-                  <a href="https://flowbite.com/" className="hover:underline">
-                    Flowbite
-                  </a>
+                  <NavigationLink href={"/" as any} className="hover:underline">
+                    {t("who-are-we-home")}
+                  </NavigationLink>
                 </li>
                 <li>
-                  <a
-                    href="https://tailwindcss.com/"
+                  <NavigationLink
+                    href={"/about-us" as any}
                     className="hover:underline"
                   >
-                    Tailwind CSS
-                  </a>
+                    {t("who-are-we-about-us")}
+                  </NavigationLink>
                 </li>
               </ul>
             </div>
             <div>
               <h2 className="mb-6 text-sm font-semibold uppercase text-white">
-                Follow us
+                {t("our-products")}
               </h2>
               <ul className=" text-gray-400 font-medium">
                 <li className="mb-4">
-                  <a
-                    href="https://github.com/themesberg/flowbite"
+                  <NavigationLink
+                    href={"/crumb-rubber" as any}
                     className="hover:underline "
                   >
-                    Github
-                  </a>
+                    {t("our-products-crumb-rubber")}
+                  </NavigationLink>
                 </li>
                 <li>
-                  <a
-                    href="https://discord.gg/4eeurUVvTy"
+                  <NavigationLink
+                    href={"/rubber-mulch" as any}
                     className="hover:underline"
                   >
-                    Discord
-                  </a>
+                    {t("our-products-rubber-mulch")}
+                  </NavigationLink>
                 </li>
               </ul>
             </div>
             <div>
               <h2 className="mb-6 text-sm font-semibold  uppercase text-white">
-                Legal
+                {t("contact")}
               </h2>
               <ul className=" text-gray-400 font-medium">
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    Privacy Policy
-                  </a>
+                  <NavigationLink
+                    href={"/dispose-tires" as any}
+                    className="hover:underline"
+                  >
+                    {t("contact-dispose-tires")}
+                  </NavigationLink>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">
-                    Terms &amp; Conditions
-                  </a>
+                  <NavigationLink
+                    href={"/contact-us" as any}
+                    className="hover:underline"
+                  >
+                    {t("contact-us")}
+                  </NavigationLink>
                 </li>
               </ul>
             </div>
@@ -82,10 +93,10 @@ export default function Footer() {
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm  sm:text-center text-gray-400">
             © 2024{" "}
-            <a href="https://flowbite.com/" className="hover:underline">
+            <a href={"/" as any} className="hover:underline">
               Tire Recycling UA
             </a>
-            . All Rights Reserved.
+            {t("all-rights-reserved")}
           </span>
           <div className="flex mt-4 sm:justify-center sm:mt-0">
             <a href="#" className="text-gray-500 hover:text-white">

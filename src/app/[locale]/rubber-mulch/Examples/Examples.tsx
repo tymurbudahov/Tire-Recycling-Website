@@ -1,4 +1,8 @@
+import { useTranslations } from "next-intl";
+
 const Examples: React.FC = () => {
+  const t = useTranslations("RubberMulchPage");
+
   return (
     <div className=" bg-gray-900 mt-10">
       {/* First application */}
@@ -15,17 +19,10 @@ const Examples: React.FC = () => {
         />
         <div className="mt-4 md:mt-0">
           <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-white sm:text-3xl">
-            Landscape for your house
+            {t("house-landscape-title")}
           </h2>
           <p className="mb-6 font-light md:text-lg text-gray-400 sm:text-base">
-            Rubber mulch is an environmentally sustainable alternative to wood
-            mulch that offers improved durability and wind resistance due to its
-            weight. This material effectively passes rainwater to plant roots
-            without retaining it and does not attract termites, making it safe
-            for landscaping. Rubber mulch is an investment in the long-term
-            beauty of your garden: it does not require annual replacement and
-            retains its vibrant color for a decade, unlike wood mulch, which
-            quickly deteriorates when exposed to the elements.
+            {t("house-landscape-description")}
           </p>
         </div>
       </div>
@@ -44,14 +41,10 @@ const Examples: React.FC = () => {
         />
         <div className="mt-4 md:mt-0">
           <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-white sm:text-3xl">
-            Coating for playgrounds
+            {t("coating-title")}
           </h2>
           <p className="mb-6 font-light md:text-lg text-gray-400 sm:text-base">
-            Rubber playground mulch is a safe, durable surface designed to
-            provide maximum protection and comfort. Made from recycled car
-            tires, this material is an excellent choice for any play area due to
-            its impact-absorbing properties that reduce the risk of injury from
-            falls.
+            {t("coating-description")}
           </p>
         </div>
       </div>

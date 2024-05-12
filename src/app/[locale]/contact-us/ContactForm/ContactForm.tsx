@@ -2,11 +2,13 @@
 import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 const ContactForm: React.FC = () => {
   const [messageSent, setMessageSent] = useState(false);
   const [errorMessage, setErrorMessage] = useState(false);
   const [isDisabled, setIsDisabled] = useState(false);
+  const t = useTranslations("ContactUsPage");
 
   const serviceID = process.env.serviceID as string;
   const templateIDContact = process.env.templateIDContact as string;
@@ -46,10 +48,10 @@ const ContactForm: React.FC = () => {
     <div className=" bg-gray-900">
       <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
         <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-white">
-          Or fill up this form
+          {t("fill-up-form-title")}
         </h2>
         <p className="mb-8 lg:mb-16 font-light text-center text-gray-400 sm:text-xl">
-          Our representative will contact you as soon as possible.
+          {t("fill-up-form-description")}
         </p>
         {/* Email  */}
         <form ref={form} onSubmit={sendEmail} className="space-y-8">
@@ -58,13 +60,13 @@ const ContactForm: React.FC = () => {
               htmlFor="name"
               className="block mb-2 text-sm font-medium  text-gray-300"
             >
-              Your name
+              {t("form.name-up")}
             </label>
             <input
               type="text"
               id="fname"
               className="shadow-sm border text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-primary-500 focus:border-primary-500 shadow-sm-light"
-              placeholder="name@flowbite.com"
+              placeholder={t("form.name-inside")}
               required
               name="fname"
             />
@@ -75,13 +77,13 @@ const ContactForm: React.FC = () => {
               htmlFor="email"
               className="block mb-2 text-sm font-medium text-gray-300"
             >
-              Email
+              {t("form.email-up")}
             </label>
             <input
               type="email"
               id="email"
               className="block p-3 w-full text-sm rounded-lg border shadow-sm focus:ring-primary-500 focus:border-primary-500 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-primary-500 focus:border-primary-500 shadow-sm-light"
-              placeholder="Let us know how we can help you"
+              placeholder={t("form.email-inside")}
               required
               name="email"
             />
@@ -91,13 +93,13 @@ const ContactForm: React.FC = () => {
               htmlFor="phone"
               className="block mb-2 text-sm font-medium  text-gray-300"
             >
-              Phone
+              {t("form.phone-up")}
             </label>
             <input
               type="text"
               id="subject"
               className="block p-3 w-full text-sm   rounded-lg border shadow-sm focus:ring-primary-500 focus:border-primary-500 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-primary-500 focus:border-primary-500 shadow-sm-light"
-              placeholder="Let us know how we can help you"
+              placeholder={t("form.phone-inside")}
               name="phone"
             />
           </div>
@@ -106,13 +108,13 @@ const ContactForm: React.FC = () => {
               htmlFor="message"
               className="block mb-2 text-sm font-medium text-gray-400"
             >
-              Your message
+              {t("form.message-up")}
             </label>
             <textarea
               id="message"
               // rows="6" commented out, gives error on vercel deployment.
               className="block p-2.5 w-full text-sm rounded-lg shadow-sm border focus:ring-primary-500 focus:border-primary-500 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-primary-500 focus:border-primary-500"
-              placeholder="Leave a comment..."
+              placeholder={t("form.message-inside")}
               name="additional-comments"
             ></textarea>
           </div>
@@ -121,11 +123,11 @@ const ContactForm: React.FC = () => {
             className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
             disabled={isDisabled}
           >
-            Send message
+            {t("form.send-message")}
           </button>
           {messageSent ? (
             <h2 className="mb-4 text-xl tracking-tight font-extrabold text-white border border-blue-500 p-5 bg-blue-500 rounded">
-              Your message sent, thank you!
+              {t("form.message-success")}
             </h2>
           ) : (
             ""
@@ -133,7 +135,7 @@ const ContactForm: React.FC = () => {
 
           {errorMessage ? (
             <h2 className="mb-4 text-xl tracking-tight font-extrabold text-white border border-red-500 p-5 bg-red-500 rounded">
-              Hmm... Some error occured, please refresh page and try again.
+              {t("form.message-error")}
             </h2>
           ) : (
             ""

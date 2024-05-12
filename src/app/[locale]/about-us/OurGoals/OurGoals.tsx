@@ -1,6 +1,9 @@
 import React from "react";
+import { useTranslations } from "next-intl";
 
 const OurGoals: React.FC = () => {
+  const t = useTranslations("AboutUsPage");
+
   return (
     <section className=" bg-gray-900 lg:py-12 lg:flex lg:justify-center">
       <div className="overflow-hidden  bg-gray-900 lg:mx-8 lg:flex lg:max-w-6xl lg:w-full">
@@ -16,21 +19,11 @@ const OurGoals: React.FC = () => {
 
         <div className="max-w-xl px-6 py-12 lg:max-w-5xl lg:w-1/2">
           <h2 className="text-2xl font-semibold  text-white md:text-3xl">
-            Our <span className="text-blue-500">Goals</span>
+            {t("our-text")}{" "}
+            <span className="text-blue-500">{t("our-goals-title-one")}</span>
           </h2>
 
-          <p className="mt-4 text-gray-300">
-            Every year we increase the scale of recycling, expanding the
-            possibilities for reusing rubber. Our strategic plan includes
-            launching new processing plants throughout Ukraine, making recycling
-            easily accessible to every corner of the country. We strive to make
-            tire disposal a daily practice, supported by public organizations
-            and active citizens. In collaboration with local authorities and
-            communities, we aim to develop a comprehensive network of tire
-            collection points. This will make it easier for every resident and
-            business to recycle their used tires, helping to protect the
-            environment.
-          </p>
+          <p className="mt-4 text-gray-300">{t("our-goals-description")}</p>
         </div>
       </div>
     </section>

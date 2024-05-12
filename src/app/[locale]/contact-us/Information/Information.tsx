@@ -1,12 +1,16 @@
+import { useTranslations } from "next-intl";
+
 const Information: React.FC = () => {
+  const t = useTranslations("ContactUsPage");
+
   return (
     <div className="bg-gray-900 text-white">
       <div className="mx-auto max-w-screen-xl px-4 py-6 sm:px-6 sm:py-12 lg:px-6 lg:py-6">
         <div className="mx-auto max-w-lg text-center">
-          <h2 className="text-3xl font-bold sm:text-4xl">Contact Us</h2>
-          <p className="mt-4 text-gray-300">
-            We will be happy to assist you with any question you have.
-          </p>
+          <h2 className="text-3xl font-bold sm:text-4xl">
+            {t("contact-us-title")}
+          </h2>
+          <p className="mt-4 text-gray-300">{t("contact-us-description")}</p>
         </div>
 
         {/* Grid containing phone, email, and address information */}
@@ -44,7 +48,9 @@ const Information: React.FC = () => {
                   ></path>
                 </g>
               </svg>
-              <h2 className="mt-4 text-xl font-bold text-white">Phone</h2>
+              <h2 className="mt-4 text-xl font-bold text-white">
+                {t("phone-title")}
+              </h2>
               <p className="mt-1 text-sm text-gray-300">
                 <strong>+ 38 067 631 22 22</strong>
               </p>
@@ -77,7 +83,9 @@ const Information: React.FC = () => {
                   ></path>
                 </g>
               </svg>
-              <h2 className="mt-4 text-xl font-bold text-white">Email</h2>
+              <h2 className="mt-4 text-xl font-bold text-white">
+                {t("email-title")}
+              </h2>
               <p className="mt-1 text-sm text-gray-300">
                 <strong>info@tirerecycling.com.ua</strong>
               </p>
@@ -110,7 +118,9 @@ const Information: React.FC = () => {
                   ></path>
                 </g>
               </svg>
-              <h2 className="mt-4 text-xl font-bold text-white">Address</h2>
+              <h2 className="mt-4 text-xl font-bold text-white">
+                {t("address-title")}
+              </h2>
               <p className="mt-1 text-sm text-gray-300">
                 Boris Krotova, 16, Dnipro, Dnipropetrovsk Oblast, 49000, Ukraine
               </p>
