@@ -1,11 +1,27 @@
 import ContactForm from "./ContactForm/ContactForm";
 import Information from "./Information/Information";
+import { unstable_setRequestLocale } from "next-intl/server";
+import { getMessages } from "next-intl/server";
+import { NextIntlClientProvider } from "next-intl";
 
-export default function Page() {
+type Props = {
+  params: { locale: string };
+};
+
+export default async function Page({ params: { locale } }: Props) {
+  // Enable static rendering
+  unstable_setRequestLocale(locale);
+
+  // Providing all messages to the client
+  // side is the easiest way to get started
+  const messages = await getMessages();
+
   return (
-    <section>
-      <Information />
-      {/* <ContactForm /> */}
-    </section>
+    <NextIntlClientProvider messages={messages}>
+      <section>
+        <Information />
+        <ContactForm />
+      </section>
+    </NextIntlClientProvider>
   );
 }

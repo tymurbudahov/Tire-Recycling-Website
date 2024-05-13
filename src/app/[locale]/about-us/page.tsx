@@ -5,8 +5,16 @@ import Facts from "./Facts/Facts";
 import OurHistory from "./OurHistory/OurHistory";
 import OurGoals from "./OurGoals/OurGoals";
 import OurTeam from "./OurTeam/OurTeam";
+import { unstable_setRequestLocale } from "next-intl/server";
 
-export default function Page() {
+type Props = {
+  params: { locale: string };
+};
+
+export default function Page({ params: { locale } }: Props) {
+  // Enable static rendering
+  unstable_setRequestLocale(locale);
+
   return (
     <>
       <FirstSectionAbout />
