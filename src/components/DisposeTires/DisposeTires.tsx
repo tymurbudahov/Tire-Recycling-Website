@@ -3,6 +3,8 @@ import NavigationLink from "../NavigationLink";
 
 export default function DisposeTires() {
   const t = useTranslations("IndexPage");
+  const disposeTiresIcon =
+    "/images/indexPage/light-blue-tire-disposal-icon.webp";
 
   return (
     <section className=" bg-gray-900">
@@ -34,10 +36,7 @@ export default function DisposeTires() {
           </NavigationLink>
         </div>
         <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-          <img
-            src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png"
-            alt="mockup"
-          />
+          <img src={disposeTiresIcon} alt="mockup" />
         </div>
       </div>
     </section>

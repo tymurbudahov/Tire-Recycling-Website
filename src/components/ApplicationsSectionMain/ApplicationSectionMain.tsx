@@ -12,7 +12,7 @@ export default function ApplicationSectionMain() {
           </h2>
           <p className="mb-4 font-light">{t("title-two-description")}</p>
           <p className="mb-4 font-medium">{t("title-two-description-two")}</p>
-          <a
+          {/* <a
             href="#"
             className="inline-flex items-center font-medium text-primary-600 hover:text-primary-800 text-primary-500 hover:text-primary-700"
           >
@@ -29,7 +29,7 @@ export default function ApplicationSectionMain() {
                 clipRule="evenodd"
               ></path>
             </svg>
-          </a>
+          </a> */}
         </div>
       </div>
     </section>

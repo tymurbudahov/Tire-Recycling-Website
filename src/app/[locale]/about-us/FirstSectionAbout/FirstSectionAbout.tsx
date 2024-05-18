@@ -14,7 +14,7 @@ const FirstSectionAbout: React.FC = () => {
           {t("about-description")}
         </p>
         <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-          <a
+          {/* <a
             href="#"
             className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 focus:ring-primary-900"
           >
@@ -30,8 +30,8 @@ const FirstSectionAbout: React.FC = () => {
                 clipRule="evenodd"
               ></path>
             </svg>
-          </a>
-          <a
+          </a> */}
+          {/* <a
             href="#"
             className="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center  rounded-lg border  focus:ring-4 text-white border-gray-700 hover:bg-gray-700 focus:ring-gray-800"
           >
@@ -43,7 +43,7 @@ const FirstSectionAbout: React.FC = () => {
               <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"></path>
             </svg>
             Watch video
-          </a>
+          </a> */}
         </div>
       </div>
     </section>

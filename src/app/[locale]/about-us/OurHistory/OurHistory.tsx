@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 const OurHistory: React.FC = () => {
   const t = useTranslations("AboutUsPage");
+  const historyOne = "/images/indexPage/history-one.jpg";
 
   return (
     <section className=" bg-gray-900 lg:py-12 lg:flex lg:justify-center">
@@ -9,8 +10,7 @@ const OurHistory: React.FC = () => {
           <div
             className="h-64 bg-cover lg:h-full"
             style={{
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80')",
+              backgroundImage: `url(${historyOne})`,
             }}
           ></div>
         </div>

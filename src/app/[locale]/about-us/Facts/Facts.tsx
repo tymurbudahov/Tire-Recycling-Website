@@ -12,9 +12,9 @@ const Facts: React.FC = () => {
             {t("stat-title")}
           </h2>
 
-          <p className="mt-4sm:text-xl text-gray-400">
+          {/* <p className="mt-4sm:text-xl text-gray-400">
             {t("stat-description")}
-          </p>
+          </p> */}
         </div>
 
         <div className="mt-8 sm:mt-12">
@@ -25,7 +25,7 @@ const Facts: React.FC = () => {
               </dt>
 
               <dd className="text-4xl font-extrabold text-blue-600 md:text-5xl">
-                $4.8m
+                500+
               </dd>
             </div>
 
@@ -35,7 +35,7 @@ const Facts: React.FC = () => {
               </dt>
 
               <dd className="text-4xl font-extrabold text-blue-600 md:text-5xl">
-                24
+                2,000,000
               </dd>
             </div>
 
@@ -45,7 +45,7 @@ const Facts: React.FC = () => {
               </dt>
 
               <dd className="text-4xl font-extrabold text-blue-600 md:text-5xl">
-                86
+                15,000,000
               </dd>
             </div>
           </dl>
