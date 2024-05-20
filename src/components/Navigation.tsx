@@ -1,6 +1,5 @@
 import { NextIntlClientProvider, useMessages } from "next-intl";
 import NavigationTwo from "./NavigationTwo";
-import NavigationThree from "./NavigationThree";
 
 export default function Navigation() {
   const message = useMessages();
