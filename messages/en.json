@@ -247,7 +247,7 @@
 
   "LocaleSwitcher": {
     "label": "Change language",
-    "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} other {Unknown}}"
+    "locale": "{locale, select, ua {ua Український} en {en English} other {Unknown}}"
   },
 
   "Navigation": {

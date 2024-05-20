@@ -9,6 +9,8 @@ export default function NavigationTwo() {
   const t = useTranslations("Navbar");
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const logo = "/images/logo/logo-two.svg";
+  const logo2 = "/images/logo/trua-logo.png";
 
   const setClose = () => {
     setIsOpen(false);
@@ -19,14 +21,10 @@ export default function NavigationTwo() {
     <nav className="bg-gray-900 border-gray-700">
       <div className="max-w-screen-lg flex flex-wrap items-center justify-between mx-auto p-4">
         <div className="flex items-center space-x-3 rtl:space-x-reverse">
-          <img
-            src="https://flowbite.com/docs/images/logo.svg"
-            className="h-8"
-            alt="Logo"
-          />
+          <img src={logo2} className="h-12" alt="Tire Recycling UA Logo" />
           <NavigationLink
             href="/"
-            className="self-center text-2lg font-semibold whitespace-nowrap text-white"
+            className="self-center text-2lg font-semibold whitespace-nowrap text-white ml-4" // Added margin-left
           >
             {t("company-name")}
           </NavigationLink>
@@ -69,7 +67,7 @@ export default function NavigationTwo() {
             <NavigationLink href="/">
               <li className="w-60 m-1 p-3 border-b w-border-gray-300 border-gray-600 lg:m-0 lg:border-0 lg:p-0 lg:w-auto">
                 <p
-                  className="py-2 px-3 text-white text-center roundedlg:p-0 lg:text-blue-500 bg-blue-600 lg:bg-transparent rounded"
+                  className="py-2 px-3 text-white text-center rounded lg:p-0 lg:text-blue-500 bg-blue-600 lg:bg-transparent rounded"
                   onClick={setClose}
                 >
                   {t("home")}
