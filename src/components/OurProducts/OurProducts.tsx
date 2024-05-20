@@ -7,7 +7,7 @@ export default function OurProducts() {
   const metalCordImage = "/images/products/metal-cord-one.webp";
   const textileCordImage = "/images/products/textile-cord.webp";
   const beadRingImage = "/images/products/bead-ring.webp";
-  const overViewImage = "/images/products/crumb-rubber.webp";
+  const rubberProductsImage = "/images/products/rubber-products.webp";
 
   const t = useTranslations("IndexPage.our-products");
 
@@ -108,19 +108,15 @@ export default function OurProducts() {
           </div>
           <div>
             <div>
-              <NavigationLink href={"/textile-cord" as any}>
-                <img
-                  className="h-auto max-w-full rounded-md"
-                  src={crumbRubberImage}
-                  alt="image description"
-                />
-              </NavigationLink>
+              <img
+                className="h-auto max-w-full rounded-md"
+                src={rubberProductsImage}
+                alt="image description"
+              />
             </div>
-            <NavigationLink href={"/textile-cord" as any}>
-              <h3 className="mb-2 text-xl font-bold text-white">
-                {t("product-name-title")}
-              </h3>
-            </NavigationLink>
+            <h3 className="mb-2 text-xl font-bold text-white">
+              {t("product-name-title")}
+            </h3>
             <p className="text-gray-400">{t("product-name-description")}</p>
           </div>
         </div>

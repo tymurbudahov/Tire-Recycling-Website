@@ -19,7 +19,7 @@ const OurGoals: React.FC = () => {
 
         <div className="max-w-xl px-6 py-12 lg:max-w-5xl lg:w-1/2">
           <h2 className="text-2xl font-semibold  text-white md:text-3xl">
-            {t("our-text")}{" "}
+            {t("our-goals-text")}{" "}
             <span className="text-blue-500">{t("our-goals-title-one")}</span>
           </h2>
 

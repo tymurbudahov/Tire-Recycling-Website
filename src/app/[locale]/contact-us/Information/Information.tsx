@@ -16,7 +16,7 @@ const Information: React.FC = () => {
         {/* Grid containing phone, email, and address information */}
         <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {/* Phone */}
-          <a href="tel:+380676312222">
+          <a href="tel:+380686868700">
             <div className="flex flex-col items-center justify-center rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-blue-500/10 hover:shadow-blue-500/10 h-48">
               <svg
                 viewBox="-0.5 0 25 25"
@@ -52,13 +52,13 @@ const Information: React.FC = () => {
                 {t("phone-title")}
               </h2>
               <p className="mt-1 text-sm text-gray-300">
-                <strong>+ 38 067 631 22 22</strong>
+                <strong>+ 38 068 68 68 700</strong>
               </p>
             </div>
           </a>
 
           {/* Email */}
-          <a href="mailto:shinov.tima@gmail.com">
+          <a href="mailto:info@tirerecycling.com.ua">
             <div className="flex flex-col items-center justify-center rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-blue-500/10 hover:shadow-blue-500/10 h-48">
               <svg
                 viewBox="-0.5 0 25 25"
