@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 const OurHistory: React.FC = () => {
   const t = useTranslations("AboutUsPage");
-  const historyOne = "/images/indexPage/history-one.jpg";
+  const historyOne = "/images/aboutUs/about-one.webp";
 
   return (
     <section className=" bg-gray-900 lg:py-12 lg:flex lg:justify-center">

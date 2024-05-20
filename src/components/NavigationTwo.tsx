@@ -9,8 +9,7 @@ export default function NavigationTwo() {
   const t = useTranslations("Navbar");
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const logo = "/images/logo/logo-two.svg";
-  const logo2 = "/images/logo/trua-logo.png";
+  const logo = "/images/logo/trua-logo.png";
 
   const setClose = () => {
     setIsOpen(false);
@@ -21,7 +20,7 @@ export default function NavigationTwo() {
     <nav className="bg-gray-900 border-gray-700">
       <div className="max-w-screen-lg flex flex-wrap items-center justify-between mx-auto p-4">
         <div className="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src={logo2} className="h-12" alt="Tire Recycling UA Logo" />
+          <img src={logo} className="h-12" alt="Tire Recycling UA Logo" />
           <NavigationLink
             href="/"
             className="self-center text-2lg font-semibold whitespace-nowrap text-white ml-4" // Added margin-left
