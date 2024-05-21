@@ -14,7 +14,7 @@ export default function Footer() {
             <NavigationLink href={"/" as any} className="flex items-center">
               <img
                 src={logo}
-                className="h-20 me-3"
+                className="h-16 me-3"
                 alt="Tire Recycling UA Logo"
               />
               <span className="self-center text-2xl font-semibold whitespace-nowrap text-white mr-2">
