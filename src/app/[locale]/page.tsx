@@ -7,10 +7,22 @@ import ApplicationSectionMain from "@/components/ApplicationsSectionMain/Applica
 import SubEmail from "@/components/SubEmail/SubEmail";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 
 type Props = {
   params: { locale: string };
 };
+
+export async function generateMetadata({
+  params: { locale },
+}: Omit<Props, "children">) {
+  const t = await getTranslations({ locale, namespace: "MainPageMetadata" });
+
+  return {
+    title: t("title"), //web title
+    description: t("description"),
+  };
+}
 
 export default async function IndexPage({ params: { locale } }: Props) {
   // Enable static rendering

@@ -20,7 +20,7 @@ export default function Footer() {
               <span className="self-center text-2xl font-semibold whitespace-nowrap text-white mr-2">
                 Tire Recycling UA
               </span>
-              <svg
+              {/* <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="25"
                 height="25"
@@ -43,7 +43,7 @@ export default function Footer() {
                   fill="#fff"
                   opacity=".2"
                 ></path>
-              </svg>
+              </svg> */}
             </NavigationLink>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">

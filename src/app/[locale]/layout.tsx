@@ -23,15 +23,16 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 
-export async function generateMetadata({
-  params: { locale },
-}: Omit<Props, "children">) {
-  const t = await getTranslations({ locale, namespace: "LocaleLayout" });
+// export async function generateMetadata({
+//   params: { locale },
+// }: Omit<Props, "children">) {
+//   const t = await getTranslations({ locale, namespace: "MainPageMetadata" });
 
-  return {
-    title: "Tire Recycling UA", //web title
-  };
-}
+//   return {
+//     title: t('title'), //web title
+//     description: t('description')
+//   };
+// }
 
 export default async function LocaleLayout({
   children,

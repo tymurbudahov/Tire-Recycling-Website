@@ -211,7 +211,8 @@
       "send-message": "Send Message",
       "message-success": "Your message has been sent. Thank you!",
       "message-error": "An error occurred. Please refresh the page and try again."
-    }
+    },
+    "address": "Boris Krotova, 16, Dnipro, Dnipropetrovsk Oblast, 49000, Ukraine"
   },
 
   "Footer": {
@@ -238,8 +239,49 @@
     "button-title": "Back to Homepage"
   },
 
-  "LocaleLayout": {
-    "title": "next-intl example"
+  "MainPageMetadata": {
+    "title": "Tire Recycling UA - Sustainable Tire Recycling in Ukraine",
+    "description": "Tire Recycling UA is a leader in eco-friendly tire recycling, processing over 15,000 tons of used tires annually in Ukraine. Explore our services and join us in making a greener future."
+  },
+
+  "AboutUsMetadata": {
+    "title": "Tire Recycling UA - About Us",
+    "description": "At Tire Recycling UA, we convert environmental challenges into sustainable opportunities, recycling over 15,000 tons of used tires annually. Discover our eco-friendly processes and how we're leading tire recycling efforts in Ukraine."
+  },
+
+  "CrumbRubberMetadata": {
+    "title": "Tire Recycling UA - Crumb Rubber",
+    "description": "Explore Tire Recycling UA premium crumb rubber, perfect for sports fields, safety surfaces, and much more. Eco-friendly and compliant with top industry standards."
+  },
+
+  "RubberMulchMetadata": {
+    "title": "Tire Recycling UA - Rubber Mulch",
+    "description": "Use eco-friendly rubber mulch from Tire Recycling UA to enhance your garden and sports fields. Prevents weed growth, retains moisture, and ensures safety during sports activities."
+  },
+
+  "MetalCordMetadata": {
+    "title": "Tire Recycling UA - Metal Cord",
+    "description": "Metal cord from Tire Recycling UA. High-quality, recycled metal cord ideal for various industrial applications."
+  },
+
+  "BeadRingMetadata": {
+    "title": "Tire Recycling UA - Bead Ring",
+    "description": "Tire Recycling UA offers bead rings from recycled tires."
+  },
+
+  "TextileCordMetadata": {
+    "title": "Tire Recycling UA - Textile Cord",
+    "description": "Tire Recycling UA offers textile cord from recycled tires."
+  },
+
+  "DisposeTireFormMetadata": {
+    "title": "Tire Recycling UA - Dispose Tires Form",
+    "description": "Fill out the short form and we will contact you. Our company accepts tires from businesses and individuals from Dnipro and other cities."
+  },
+
+  "ContactUsMetadata": {
+    "title": "Tire Recycling UA - Contact Us",
+    "description": "Contact Tire Recycling UA for purchasing high-quality crumb rubber, mulch, or for tire disposal. We will be happy to assist with all your questions."
   },
 
   "LocaleSwitcher": {
