@@ -10,9 +10,10 @@ const DisposeForm: React.FC = () => {
 
   const t = useTranslations("DisposeTiresPage");
 
-  const serviceID = process.env.serviceID as string;
-  const templateIdDispose = process.env.templateIdDispose as string;
-  const publicKEY = process.env.publicKEY as string;
+  const serviceID = process.env.NEXT_PUBLIC_SERVICE_ID as string;
+  const templateIdDispose = process.env
+    .NEXT_PUBLIC_TEMPLATE_ID_DISPOSE as string;
+  const publicKEY = process.env.NEXT_PUBLIC_KEY_EMAILJS as string;
 
   const form = useRef<HTMLFormElement>(null);
 

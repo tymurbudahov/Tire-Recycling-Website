@@ -47,9 +47,9 @@ export default async function IndexPage({ params: { locale } }: Props) {
       <ApplicationSectionMain />
 
       {/* Subscribe to email list */}
-      <NextIntlClientProvider messages={messages}>
+      {/* <NextIntlClientProvider messages={messages}>
         <SubEmail />
-      </NextIntlClientProvider>
+      </NextIntlClientProvider> */}
     </>
   );
 }
