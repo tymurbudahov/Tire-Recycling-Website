@@ -286,7 +286,7 @@
 
   "LocaleSwitcher": {
     "label": "Change language",
-    "locale": "{locale, select, ua {Український} en {English} other {Unknown}}"
+    "locale": "{locale, select, uk {Український} en {English} other {Unknown}}"
   },
 
   "Navigation": {
