@@ -11,6 +11,7 @@ import { locales } from "@/config";
 import Footer from "@/components/Footer/Footer";
 // import { NextIntlClientProvider } from "next-intl";
 import NavigationTwo from "@/components/NavigationTwo";
+import GoogleAnalytics from "../googleAnalytics/googleAnalytics";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,17 +23,6 @@ type Props = {
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
-
-// export async function generateMetadata({
-//   params: { locale },
-// }: Omit<Props, "children">) {
-//   const t = await getTranslations({ locale, namespace: "MainPageMetadata" });
-
-//   return {
-//     title: t('title'), //web title
-//     description: t('description')
-//   };
-// }
 
 export default async function LocaleLayout({
   children,
@@ -47,6 +37,7 @@ export default async function LocaleLayout({
 
   return (
     <html className="h-full" lang={locale}>
+      <GoogleAnalytics />
       <body
         className={clsx(inter.className, "flex h-full flex-col bg-gray-900")}
       >
