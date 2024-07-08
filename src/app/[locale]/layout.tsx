@@ -6,6 +6,7 @@ import {
   unstable_setRequestLocale,
 } from "next-intl/server";
 import { ReactNode } from "react";
+import Head from "next/head";
 import Navigation from "@/components/Navigation";
 import { locales } from "@/config";
 import Footer from "@/components/Footer/Footer";
@@ -22,6 +23,17 @@ type Props = {
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({
+  //Metadata for keywords
+  params: { locale },
+}: Omit<Props, "children">) {
+  const t = await getTranslations({ locale, namespace: "KeywordsMeta" });
+
+  return {
+    keywords: t("words"),
+  };
 }
 
 export default async function LocaleLayout({
