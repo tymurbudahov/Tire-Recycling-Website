@@ -13,6 +13,8 @@ import Footer from "@/components/Footer/Footer";
 // import { NextIntlClientProvider } from "next-intl";
 import NavigationTwo from "@/components/NavigationTwo";
 import GoogleAnalytics from "../googleAnalytics/googleAnalytics";
+// import ScrollToTop from "@/components/ScrollToTop";
+import PhoneIcon from "@/components/PhoneIcon";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -57,6 +59,8 @@ export default async function LocaleLayout({
         {children}
         {/* Getting error with fill-rule in footer component */}
         <Footer />
+        <PhoneIcon />
+        {/* <ScrollToTop /> */}
       </body>
     </html>
   );
