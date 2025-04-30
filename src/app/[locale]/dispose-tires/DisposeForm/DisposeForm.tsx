@@ -7,6 +7,7 @@ const DisposeForm: React.FC = () => {
   const [messageSent, setMessageSent] = useState(false);
   const [errorMessage, setErrorMessage] = useState(false);
   const [isDisabled, setIsDisabled] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const t = useTranslations("DisposeTiresPage");
 
@@ -20,54 +21,51 @@ const DisposeForm: React.FC = () => {
   const sendEmail = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    //ensure form.currect is not null
-    if (form.current !== null) {
-      emailjs
-        .sendForm(serviceID, templateIdDispose, form.current, publicKEY)
-        .then(
-          (result) => {
-            setMessageSent(true);
-            setIsDisabled(true);
-            console.log(`${result.text}, message sent. Thank you.`);
-          },
-          (error) => {
-            setErrorMessage(true);
-            setIsDisabled(true);
-            console.log(`${error.text}, error occurred.`);
-          }
-        );
-    } else {
-      //Handle the case where form.current is null
-      console.log("The form is not available.");
-      setErrorMessage(true);
-    }
+    if (form.current === null || isDisabled) return;
+
+    setIsDisabled(true);
+
+    emailjs
+      .sendForm(serviceID, templateIdDispose, form.current, publicKEY)
+      .then(
+        (result) => {
+          setMessageSent(true);
+          setShowModal(true);
+          console.log(`${result.text}, message sent. Thank you.`);
+        },
+        (error) => {
+          setErrorMessage(true);
+          setShowModal(true);
+          console.log(`${error.text}, error occurred.`);
+        }
+      );
   };
 
   return (
-    <div className=" bg-gray-900">
+    <div className="bg-gray-900 relative">
       <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
         <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-white">
           {t("dispose-tires-title")}
         </h2>
-        <p className="mb-8 lg:mb-16 font-light text-center  text-gray-400 sm:text-xl">
+        <p className="mb-8 lg:mb-16 font-light text-center text-gray-400 sm:text-xl">
           {t("dispose-tires-description")}
         </p>
         <form ref={form} onSubmit={sendEmail} className="space-y-8">
           {/* Name */}
           <div>
             <label
-              htmlFor="name"
-              className="block mb-2 text-sm font-medium  text-gray-300"
+              htmlFor="fname"
+              className="block mb-2 text-sm font-medium text-gray-300"
             >
               {t("form.name-up")}
             </label>
             <input
               type="text"
               id="fname"
-              className="shadow-sm border  text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-primary-500 focus:border-primary-500 shadow-sm-light"
-              placeholder={t("form.name-inside")}
-              required
               name="fname"
+              required
+              className="shadow-sm border text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white"
+              placeholder={t("form.name-inside")}
             />
           </div>
 
@@ -82,10 +80,10 @@ const DisposeForm: React.FC = () => {
             <input
               type="email"
               id="email"
-              className="block p-3 w-full text-sm rounded-lg border shadow-sm focus:ring-primary-500 focus:border-primary-500 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-primary-500 focus:border-primary-500 shadow-sm-light"
-              placeholder={t("form.email-inside")}
-              required
               name="email"
+              required
+              className="block p-3 w-full text-sm rounded-lg border shadow-sm bg-gray-700 border-gray-600 placeholder-gray-400 text-white"
+              placeholder={t("form.email-inside")}
             />
           </div>
 
@@ -99,10 +97,10 @@ const DisposeForm: React.FC = () => {
             </label>
             <input
               type="text"
-              id="subject"
-              className="block p-3 w-full text-sm rounded-lg border shadow-sm focus:ring-primary-500 focus:border-primary-500 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-primary-500 focus:border-primary-500 shadow-sm-light"
-              placeholder=""
+              id="phone"
               name="phone"
+              className="block p-3 w-full text-sm rounded-lg border shadow-sm bg-gray-700 border-gray-600 placeholder-gray-400 text-white"
+              placeholder=""
             />
           </div>
 
@@ -116,121 +114,130 @@ const DisposeForm: React.FC = () => {
             </label>
             <input
               type="text"
-              id="subject"
-              className="block p-3 w-full text-sm rounded-lg border shadow-sm focus:ring-primary-500 focus:border-primary-500 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-primary-500 focus:border-primary-500 shadow-sm-light"
-              placeholder=""
+              id="company"
               name="company"
+              className="block p-3 w-full text-sm rounded-lg border shadow-sm bg-gray-700 border-gray-600 placeholder-gray-400 text-white"
+              placeholder=""
             />
           </div>
 
           {/* Tire Type */}
           <div>
             <label
-              htmlFor="phone"
+              htmlFor="tiretype"
               className="block mb-2 text-sm font-medium text-gray-300"
             >
               {t("form.tire-type-up")}
             </label>
             <input
               type="text"
-              id="subject"
-              className="block p-3 w-full text-sm rounded-lg border shadow-sm focus:ring-primary-500 focus:border-primary-500 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-primary-500 focus:border-primary-500 shadow-sm-light"
-              placeholder={t("form.tire-type-inside")}
+              id="tiretype"
               name="tiretype"
+              className="block p-3 w-full text-sm rounded-lg border shadow-sm bg-gray-700 border-gray-600 placeholder-gray-400 text-white"
+              placeholder={t("form.tire-type-inside")}
             />
           </div>
 
-          {/* How many tires do you have */}
+          {/* How many tires */}
           <div>
             <label
-              htmlFor="phone"
+              htmlFor="howmanytires"
               className="block mb-2 text-sm font-medium text-gray-300"
             >
               {t("form.tire-quantity-up")}
             </label>
             <input
               type="text"
-              id="subject"
-              className="block p-3 w-full text-sm rounded-lg border shadow-sm focus:ring-primary-500 focus:border-primary-500 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-primary-500 focus:border-primary-500 shadow-sm-light"
-              placeholder=""
+              id="howmanytires"
               name="howmanytires"
+              className="block p-3 w-full text-sm rounded-lg border shadow-sm bg-gray-700 border-gray-600 placeholder-gray-400 text-white"
+              placeholder=""
             />
           </div>
 
           {/* Location */}
           <div>
             <label
-              htmlFor="phone"
+              htmlFor="location"
               className="block mb-2 text-sm font-medium text-gray-300"
             >
               {t("form.location-up")}
             </label>
             <input
               type="text"
-              id="subject"
-              className="block p-3 w-full text-sm rounded-lg border shadow-sm focus:ring-primary-500 focus:border-primary-500 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-primary-500 focus:border-primary-500 shadow-sm-light"
-              placeholder={t("form.location-inside")}
+              id="location"
               name="location"
+              className="block p-3 w-full text-sm rounded-lg border shadow-sm bg-gray-700 border-gray-600 placeholder-gray-400 text-white"
+              placeholder={t("form.location-inside")}
             />
           </div>
 
           {/* Delivery */}
           <div>
             <label
-              htmlFor="phone"
+              htmlFor="delivery"
               className="block mb-2 text-sm font-medium text-gray-300"
             >
               {t("form.delivery-up")}
             </label>
             <input
               type="text"
-              id="subject"
-              className="block p-3 w-full text-sm rounded-lg border shadow-sm focus:ring-primary-500 focus:border-primary-500 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-primary-500 focus:border-primary-500 shadow-sm-light"
-              placeholder=""
+              id="delivery"
               name="delivery"
+              className="block p-3 w-full text-sm rounded-lg border shadow-sm bg-gray-700 border-gray-600 placeholder-gray-400 text-white"
+              placeholder=""
             />
           </div>
 
-          {/* Additional comments: */}
+          {/* Comments */}
           <div className="sm:col-span-2">
             <label
-              htmlFor="message"
+              htmlFor="addcomments"
               className="block mb-2 text-sm font-medium text-gray-400"
             >
               {t("form.additional-comments-up")}
             </label>
             <textarea
-              id="message"
-              // rows="6" commented out, gives error on vercel deployment.
-              className="block p-2.5 w-full text-sm rounded-lg shadow-sm border focus:ring-primary-500 focus:border-primary-500 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-primary-500 focus:border-primary-500"
-              placeholder={t("form.additional-comments-inside")}
+              id="addcomments"
               name="addcomments"
+              className="block p-2.5 w-full text-sm rounded-lg shadow-sm border bg-gray-700 border-gray-600 placeholder-gray-400 text-white"
+              placeholder={t("form.additional-comments-inside")}
             ></textarea>
           </div>
+
           <button
             type="submit"
-            className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
             disabled={isDisabled}
+            className={`py-3 px-5 text-sm font-medium text-center rounded-lg sm:w-fit focus:ring-4 focus:outline-none text-white
+              ${isDisabled && messageSent ? "bg-green-600 cursor-not-allowed" : ""}
+              ${isDisabled && errorMessage ? "bg-red-600 cursor-not-allowed" : ""}
+              ${!isDisabled ? "bg-blue-600 hover:bg-blue-700 focus:ring-blue-800" : ""}`}
           >
-            {t("form.send-message")}
+            {isDisabled && messageSent && t("form.message-success")}
+            {isDisabled && errorMessage && t("form.message-error")}
+            {!isDisabled && t("form.send-message")}
           </button>
-          {messageSent ? (
-            <h2 className="mb-4 text-xl tracking-tight font-extrabold text-white border border-blue-500 p-5 bg-blue-500 rounded">
-              {t("form.message-success")}
-            </h2>
-          ) : (
-            ""
-          )}
-
-          {errorMessage ? (
-            <h2 className="mb-4 text-xl tracking-tight font-extrabold text-white border border-red-500 p-5 bg-red-500 rounded">
-              {t("form.message-error")}
-            </h2>
-          ) : (
-            ""
-          )}
         </form>
       </div>
+
+      {/* Modal */}
+      {showModal && (
+        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-60 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg p-6 max-w-sm w-full shadow-xl text-center">
+            <h2 className="text-xl font-semibold text-gray-800 mb-4">
+              {messageSent
+                ? t("form.message-success")
+                : t("form.message-error")}
+            </h2>
+            <button
+              className="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded"
+              onClick={() => setShowModal(false)}
+            >
+              OK
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

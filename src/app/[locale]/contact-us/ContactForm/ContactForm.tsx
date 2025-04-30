@@ -8,6 +8,8 @@ const ContactForm: React.FC = () => {
   const [messageSent, setMessageSent] = useState(false);
   const [errorMessage, setErrorMessage] = useState(false);
   const [isDisabled, setIsDisabled] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+
   const t = useTranslations("ContactUsPage");
 
   const serviceID = process.env.NEXT_PUBLIC_SERVICE_ID as string;
@@ -16,37 +18,32 @@ const ContactForm: React.FC = () => {
   const publicKEY = process.env.NEXT_PUBLIC_KEY_EMAILJS as string;
 
   const router = useRouter();
-
   const form = useRef<HTMLFormElement>(null);
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (form.current === null || isDisabled) return;
 
-    //ensure form.currect is not null
-    if (form.current !== null) {
-      emailjs
-        .sendForm(serviceID, templateIDContact, form.current, publicKEY)
-        .then(
-          (result) => {
-            setMessageSent(true);
-            setIsDisabled(true);
-            console.log(`${result.text}, message sent. Thank you.`);
-          },
-          (error) => {
-            setErrorMessage(true);
-            setIsDisabled(true);
-            console.log(`${error.text}, error occurred.`);
-          }
-        );
-    } else {
-      //Handle the case where form.current is null
-      console.log("The form is not available.");
-      setErrorMessage(true);
-    }
+    setIsDisabled(true);
+
+    emailjs
+      .sendForm(serviceID, templateIDContact, form.current, publicKEY)
+      .then(
+        (result) => {
+          setMessageSent(true);
+          setShowModal(true);
+          console.log(`${result.text}, message sent. Thank you.`);
+        },
+        (error) => {
+          setErrorMessage(true);
+          setShowModal(true);
+          console.log(`${error.text}, error occurred.`);
+        }
+      );
   };
 
   return (
-    <div className=" bg-gray-900">
+    <div className="bg-gray-900 relative">
       <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
         <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-white">
           {t("fill-up-form-title")}
@@ -54,25 +51,24 @@ const ContactForm: React.FC = () => {
         <p className="mb-8 lg:mb-16 font-light text-center text-gray-400 sm:text-xl">
           {t("fill-up-form-description")}
         </p>
-        {/* Email  */}
         <form ref={form} onSubmit={sendEmail} className="space-y-8">
           <div>
             <label
-              htmlFor="name"
-              className="block mb-2 text-sm font-medium  text-gray-300"
+              htmlFor="fname"
+              className="block mb-2 text-sm font-medium text-gray-300"
             >
               {t("form.name-up")}
             </label>
             <input
               type="text"
               id="fname"
-              className="shadow-sm border text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-primary-500 focus:border-primary-500 shadow-sm-light"
-              placeholder={t("form.name-inside")}
-              required
               name="fname"
+              required
+              className="shadow-sm border text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white"
+              placeholder={t("form.name-inside")}
             />
           </div>
-          {/* Subject */}
+
           <div>
             <label
               htmlFor="email"
@@ -83,27 +79,29 @@ const ContactForm: React.FC = () => {
             <input
               type="email"
               id="email"
-              className="block p-3 w-full text-sm rounded-lg border shadow-sm focus:ring-primary-500 focus:border-primary-500 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-primary-500 focus:border-primary-500 shadow-sm-light"
-              placeholder={t("form.email-inside")}
-              required
               name="email"
+              required
+              className="block p-3 w-full text-sm rounded-lg border shadow-sm bg-gray-700 border-gray-600 placeholder-gray-400 text-white"
+              placeholder={t("form.email-inside")}
             />
           </div>
+
           <div>
             <label
               htmlFor="phone"
-              className="block mb-2 text-sm font-medium  text-gray-300"
+              className="block mb-2 text-sm font-medium text-gray-300"
             >
               {t("form.phone-up")}
             </label>
             <input
               type="text"
-              id="subject"
-              className="block p-3 w-full text-sm   rounded-lg border shadow-sm focus:ring-primary-500 focus:border-primary-500 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-primary-500 focus:border-primary-500 shadow-sm-light"
-              placeholder={t("form.phone-inside")}
+              id="phone"
               name="phone"
+              className="block p-3 w-full text-sm rounded-lg border shadow-sm bg-gray-700 border-gray-600 placeholder-gray-400 text-white"
+              placeholder={t("form.phone-inside")}
             />
           </div>
+
           <div className="sm:col-span-2">
             <label
               htmlFor="message"
@@ -113,36 +111,45 @@ const ContactForm: React.FC = () => {
             </label>
             <textarea
               id="message"
-              // rows="6" commented out, gives error on vercel deployment.
-              className="block p-2.5 w-full text-sm rounded-lg shadow-sm border focus:ring-primary-500 focus:border-primary-500 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-primary-500 focus:border-primary-500"
-              placeholder={t("form.message-inside")}
               name="additional-comments"
+              className="block p-2.5 w-full text-sm rounded-lg shadow-sm border bg-gray-700 border-gray-600 placeholder-gray-400 text-white"
+              placeholder={t("form.message-inside")}
             ></textarea>
           </div>
+
           <button
             type="submit"
-            className="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit focus:ring-4 focus:outline-none bg-blue-600 hover:bg-blue-700 focus:ring-blue-800"
             disabled={isDisabled}
+            className={`py-3 px-5 text-sm font-medium text-center rounded-lg sm:w-fit focus:ring-4 focus:outline-none text-white
+              ${isDisabled && messageSent ? "bg-green-600 cursor-not-allowed" : ""}
+              ${isDisabled && errorMessage ? "bg-red-600 cursor-not-allowed" : ""}
+              ${!isDisabled ? "bg-blue-600 hover:bg-blue-700 focus:ring-blue-800" : ""}`}
           >
-            {t("form.send-message")}
+            {isDisabled && messageSent && t("form.message-success")}
+            {isDisabled && errorMessage && t("form.message-error")}
+            {!isDisabled && t("form.send-message")}
           </button>
-          {messageSent ? (
-            <h2 className="mb-4 text-xl tracking-tight font-extrabold text-white border border-blue-500 p-5 bg-blue-500 rounded">
-              {t("form.message-success")}
-            </h2>
-          ) : (
-            ""
-          )}
-
-          {errorMessage ? (
-            <h2 className="mb-4 text-xl tracking-tight font-extrabold text-white border border-red-500 p-5 bg-red-500 rounded">
-              {t("form.message-error")}
-            </h2>
-          ) : (
-            ""
-          )}
         </form>
       </div>
+
+      {/* Modal */}
+      {showModal && (
+        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-60 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg p-6 max-w-sm w-full shadow-xl text-center">
+            <h2 className="text-xl font-semibold text-gray-800 mb-4">
+              {messageSent
+                ? t("form.message-success")
+                : t("form.message-error")}
+            </h2>
+            <button
+              className="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded"
+              onClick={() => setShowModal(false)}
+            >
+              OK
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
