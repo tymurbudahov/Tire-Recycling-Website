@@ -30,7 +30,7 @@ export default function Page() {
     email: "ceo@tirerecycling.com.ua",
     phoneUS: "+1 (786) 546-7020",
     phoneUA: "+380 (67) 631-0400",
-    website: "https://tirerecycling.com.ua",
+    website: "https://tirerecycling.com.ua/en",
     location: "Kyiv, Ukraine • Miami, FL, USA",
   } as const;
 
