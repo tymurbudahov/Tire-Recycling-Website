@@ -59,7 +59,7 @@ export default async function LocaleLayout({
         {children}
         {/* Getting error with fill-rule in footer component */}
         <Footer />
-        <PhoneIcon />
+        {/* <PhoneIcon /> */}
         {/* <ScrollToTop /> */}
       </body>
     </html>

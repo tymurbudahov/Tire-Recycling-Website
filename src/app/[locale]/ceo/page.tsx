@@ -23,7 +23,6 @@ export default function Page() {
   const [copied, setCopied] = useState(false);
   const [avatarError, setAvatarError] = useState(false);
 
-  // ▶️ Edit these placeholders with real data
   const data = {
     firstName: "Artur",
     lastName: "Budagov",
@@ -32,15 +31,13 @@ export default function Page() {
     email: "ceo@tirerecycling.com.ua",
     phoneUS: "+1 (786) 546-7020",
     phoneUA: "+380 (67) 631-0400",
-    website: "tirerecycling.com.ua/en",
+    website: "https://tirerecycling.com.ua/en",
     location: "Kyiv, Ukraine • Miami, FL, USA",
-    // put your image in /public (e.g., /artur.jpg) or use a remote URL allowed by next.config.js
     photoUrl: "/images/artur.jpg",
   } as const;
 
   const fullName = `${data.firstName} ${data.lastName}`;
 
-  // make a tel: href from a human-readable phone
   const toTelHref = (s: string) => `tel:${s.replace(/[^\d+]/g, "")}`;
 
   const handleCopy = async () => {
@@ -87,18 +84,18 @@ END:VCARD`;
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="grid gap-6 sm:gap-8 md:grid-cols-[1.2fr_1fr] items-stretch"
         >
-          {/* Business Card */}
+          {/* bussiness card */}
           <motion.div
             whileHover={{ y: -2 }}
             transition={{ type: "spring", stiffness: 200, damping: 20 }}
             className="group relative p-[1px] rounded-3xl bg-gradient-to-br from-cyan-500 via-fuchsia-500 to-amber-400 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.7)]"
           >
-            {/* subtle animated shine */}
+            {/* animated shine */}
             <div className="pointer-events-none absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-20 transition-opacity bg-[radial-gradient(80rem_20rem_at_0%_0%,white,transparent)]" />
 
             <div className="relative rounded-3xl bg-neutral-900/70 backdrop-blur-md p-6 sm:p-8 md:p-10 h-full">
               <div className="flex flex-col md:flex-row md:items-center gap-5 sm:gap-6 md:gap-8">
-                {/* Avatar (photo with fallback to initials) */}
+                {/* avatar (photo with fallback to initials) */}
                 <div className="relative">
                   <motion.div
                     initial={{ scale: 0.98 }}
@@ -130,7 +127,7 @@ END:VCARD`;
                   </div>
                 </div>
 
-                {/* Name & Title */}
+                {/* name & title */}
                 <div className="flex-1 min-w-0">
                   <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold leading-tight">
                     <span className="bg-gradient-to-r from-white via-white/90 to-white/70 bg-clip-text text-transparent">
@@ -150,10 +147,10 @@ END:VCARD`;
                 </div>
               </div>
 
-              {/* Divider */}
+              {/* divider */}
               <div className="my-5 sm:my-6 h-px bg-gradient-to-r from-transparent via-neutral-700/60 to-transparent" />
 
-              {/* Contact grid */}
+              {/* contact grid */}
               <div className="grid gap-3 sm:grid-cols-2">
                 <ContactRow
                   icon={<Mail className="size-4" />}
@@ -241,7 +238,6 @@ END:VCARD`;
               <ul className="mt-5 sm:mt-6 space-y-3 text-neutral-300 text-sm sm:text-base">
                 <BioItem icon={<Building2 className="size-4" />}>
                   CEO & Owner: Tire Recycling UA; Green Technology
-                  (tire-recycling plant operations)
                 </BioItem>
                 <BioItem icon={<Factory className="size-4" />}>
                   Former CEO: EuroTire — manufacturer of ultra-large
