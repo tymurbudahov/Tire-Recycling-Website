@@ -43,7 +43,6 @@ function AutoplayVideo() {
         loop
         playsInline
         controls
-        poster="/images/indexPage/tire-three.webp"
       >
         <source src="/video/tire-recycling-video.mp4" type="video/mp4" />
         Sorry, your browser doesn’t support this video.
