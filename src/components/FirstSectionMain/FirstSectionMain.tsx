@@ -7,6 +7,7 @@ export default function FirstSectionMain() {
 
   return (
     <section className=" bg-gray-900">
+      <AutoplayVideo />
       <div className="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-10 lg:px-6">
         <div className="font-light sm:text-lg text-gray-400">
           <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-white">
@@ -29,5 +30,24 @@ export default function FirstSectionMain() {
         </div>
       </div>
     </section>
+  );
+}
+
+function AutoplayVideo() {
+  return (
+    <div className="flex justify-center p-4">
+      <video
+        className="max-w-full rounded-xl shadow-lg"
+        autoPlay
+        muted
+        loop
+        playsInline
+        controls
+        poster="/images/indexPage/tire-three.webp"
+      >
+        <source src="/video/tire-recycling-video.mp4" type="video/mp4" />
+        Sorry, your browser doesn’t support this video.
+      </video>
+    </div>
   );
 }
