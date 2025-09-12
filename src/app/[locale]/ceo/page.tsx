@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import type React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   Mail,
@@ -20,6 +21,7 @@ import {
 
 export default function Page() {
   const [copied, setCopied] = useState(false);
+  const [avatarError, setAvatarError] = useState(false);
 
   // ▶️ Edit these placeholders with real data
   const data = {
@@ -30,8 +32,10 @@ export default function Page() {
     email: "ceo@tirerecycling.com.ua",
     phoneUS: "+1 (786) 546-7020",
     phoneUA: "+380 (67) 631-0400",
-    website: "https://tirerecycling.com.ua/en",
+    website: "tirerecycling.com.ua/en",
     location: "Kyiv, Ukraine • Miami, FL, USA",
+    // put your image in /public (e.g., /artur.jpg) or use a remote URL allowed by next.config.js
+    photoUrl: "/images/artur.jpg",
   } as const;
 
   const fullName = `${data.firstName} ${data.lastName}`;
@@ -94,18 +98,30 @@ END:VCARD`;
 
             <div className="relative rounded-3xl bg-neutral-900/70 backdrop-blur-md p-6 sm:p-8 md:p-10 h-full">
               <div className="flex flex-col md:flex-row md:items-center gap-5 sm:gap-6 md:gap-8">
-                {/* Avatar */}
+                {/* Avatar (photo with fallback to initials) */}
                 <div className="relative">
                   <motion.div
                     initial={{ scale: 0.98 }}
                     animate={{ scale: 1 }}
                     transition={{ duration: 0.4 }}
-                    className="size-16 sm:size-20 md:size-24 rounded-2xl bg-gradient-to-br from-neutral-800 to-neutral-900 grid place-items-center shadow-inner ring-1 ring-white/10"
+                    className="relative size-16 sm:size-20 md:size-24 rounded-2xl overflow-hidden bg-gradient-to-br from-neutral-800 to-neutral-900 grid place-items-center shadow-inner ring-1 ring-white/10"
                   >
-                    <span className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight">
-                      {data.firstName[0]}
-                      {data.lastName[0]}
-                    </span>
+                    {!avatarError && data.photoUrl ? (
+                      <Image
+                        src={data.photoUrl}
+                        alt={fullName}
+                        fill
+                        sizes="(min-width: 768px) 6rem, (min-width: 640px) 5rem, 4rem"
+                        className="object-cover"
+                        onError={() => setAvatarError(true)}
+                        priority
+                      />
+                    ) : (
+                      <span className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight">
+                        {data.firstName[0]}
+                        {data.lastName[0]}
+                      </span>
+                    )}
                   </motion.div>
                   <div className="absolute -bottom-1 -right-1 rounded-full p-[2px] bg-gradient-to-br from-cyan-500 to-fuchsia-500">
                     <div className="rounded-full bg-neutral-900 px-2 py-0.5 text-[9px] sm:text-[10px] font-medium">
