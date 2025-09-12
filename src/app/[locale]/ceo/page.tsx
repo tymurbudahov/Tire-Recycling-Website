@@ -200,13 +200,13 @@ END:VCARD`;
                   )}
                 </button>
 
-                <a
+                {/* <a
                   href={`mailto:${data.email}`}
                   aria-label="Send email"
                   className="w-full sm:w-auto inline-flex justify-center items-center gap-2 rounded-xl bg-cyan-500/90 px-4 py-2 text-sm font-medium hover:bg-cyan-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-300 transition"
                 >
                   <Send className="size-4" /> Email
-                </a>
+                </a> */}
 
                 <button
                   onClick={downloadVCard}
