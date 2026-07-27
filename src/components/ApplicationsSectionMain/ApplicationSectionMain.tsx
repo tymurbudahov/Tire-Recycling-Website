@@ -4,10 +4,10 @@ export default function ApplicationSectionMain() {
   const t = useTranslations("IndexPage");
 
   return (
-    <section className=" bg-gray-900">
-      <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+    <section className="bg-gray-900">
+      <div className="px-4 mx-auto max-w-screen-xl lg:px-6">
         <div className="max-w-screen-lg sm:text-lg text-gray-400">
-          <h2 className="mb-4 text-4xl tracking-tight font-bold  text-white">
+          <h2 className="mb-5 text-4xl tracking-tight font-bold text-white md:text-5xl">
             {t("title-two")}
           </h2>
           <p className="mb-4 font-light">{t("title-two-description")}</p>
