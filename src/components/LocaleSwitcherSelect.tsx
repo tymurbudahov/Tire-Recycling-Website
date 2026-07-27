@@ -25,9 +25,7 @@ export default function LocaleSwitcherSelect({
     const nextLocale = event.target.value;
     startTransition(() => {
       router.replace(
-        // @ts-expect-error -- TypeScript will validate that only known `params`
-        // are used in combination with a given `pathname`. Since the two will
-        // always match for the current route, we can skip runtime checks.
+        // @ts-expect-error The current route and params are already paired.
         { pathname, params },
         { locale: nextLocale }
       );
@@ -35,22 +33,23 @@ export default function LocaleSwitcherSelect({
   }
 
   return (
-    <label
-      className={clsx(
-        "relative text-gray-400",
-        isPending && "transition-opacity [&:disabled]:opacity-30"
-      )}
-    >
-      <p className="sr-only">{label}</p>
+    <label className={clsx("relative", isPending && "opacity-50")}>
+      <span className="sr-only">{label}</span>
       <select
-        className="inline-flex appearance-none bg-transparent py-3 pl-2 pr-6"
+        className="appearance-none bg-transparent py-2 pl-3 pr-8 text-xs font-semibold uppercase tracking-wider"
         defaultValue={defaultValue}
         disabled={isPending}
         onChange={onSelectChange}
+        aria-label={label}
       >
         {children}
       </select>
-      <span className="pointer-events-none absolute right-2 top-[8px]">⌄</span>
+      <span
+        className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-[10px]"
+        aria-hidden="true"
+      >
+        ↓
+      </span>
     </label>
   );
 }

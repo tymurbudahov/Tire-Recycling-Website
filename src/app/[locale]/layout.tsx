@@ -35,6 +35,23 @@ export async function generateMetadata({
 
   return {
     keywords: t("words"),
+    metadataBase: new URL("https://tirerecycling.com.ua"),
+    openGraph: {
+      siteName: "Tire Recycling UA",
+      type: "website",
+      images: [
+        {
+          url: "/og.png",
+          width: 1200,
+          height: 630,
+          alt: "Tire Recycling UA",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      images: ["/og.png"],
+    },
   };
 }
 
@@ -56,7 +73,7 @@ export default async function LocaleLayout({
         className={clsx(inter.className, "flex h-full flex-col bg-gray-900")}
       >
         <Navigation />
-        {children}
+        <main className="flex-1">{children}</main>
         {/* Getting error with fill-rule in footer component */}
         <Footer />
         {/* <PhoneIcon /> */}

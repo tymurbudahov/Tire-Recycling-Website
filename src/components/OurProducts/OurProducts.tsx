@@ -12,15 +12,15 @@ export default function OurProducts() {
   const t = useTranslations("IndexPage.our-products");
 
   return (
-    <section className="bg-gray-900">
-      <div className="py-8 px-4 mx-auto max-w-screen-xl sm:py-0 lg:px-6">
+    <section className="bg-gray-900 border-y border-gray-800">
+      <div className="px-4 mx-auto max-w-screen-xl lg:px-6">
         <div className="max-w-screen-md mb-8 lg:mb-16">
-          <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-white">
+          <h2 className="mb-5 text-4xl tracking-tight font-bold text-white md:text-5xl">
             {t("title")}
           </h2>
           <p className="sm:text-xl text-gray-400">{t("title-description")}</p>
         </div>
-        <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
+        <div className="product-grid grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           <div>
             <div>
               <NavigationLink href={"/crumb-rubber" as any}>

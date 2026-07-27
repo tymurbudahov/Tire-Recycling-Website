@@ -7,18 +7,18 @@ export default function DisposeTires() {
     "/images/indexPage/light-blue-tire-disposal-icon.webp";
 
   return (
-    <section className=" bg-gray-900">
-      <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-0 lg:grid-cols-12">
+    <section className="bg-gray-900">
+      <div className="grid max-w-screen-xl px-4 mx-auto gap-12 lg:grid-cols-12 lg:items-center">
         <div className="mr-auto place-self-center lg:col-span-7">
-          <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-white">
+          <h2 className="max-w-2xl mb-5 text-4xl font-bold tracking-tight leading-none md:text-5xl xl:text-6xl text-white">
             {t("dispose-title")}
-          </h1>
-          <p className="max-w-2xl mb-6 font-light lg:mb-8 md:text-lg lg:text-xl text-gray-400">
+          </h2>
+          <p className="max-w-2xl mb-8 md:text-lg lg:text-xl text-gray-400">
             {t("dtires-text")}
           </p>
           <NavigationLink
             href={"/dispose-tires" as any}
-            className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 focus:ring-primary-900"
+            className="inline-flex items-center justify-center px-6 py-3 mr-3 text-sm font-bold text-center rounded-full bg-primary-700 hover:bg-primary-800"
           >
             {t("dtires-button")}
             <svg
@@ -35,8 +35,8 @@ export default function DisposeTires() {
             </svg>
           </NavigationLink>
         </div>
-        <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-          <img src={disposeTiresIcon} alt="mockup" />
+        <div className="lg:col-span-5 flex justify-center">
+          <img className="max-h-[28rem] object-contain" src={disposeTiresIcon} alt="" />
         </div>
       </div>
     </section>
