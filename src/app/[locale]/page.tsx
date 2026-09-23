@@ -1,21 +1,19 @@
-import { useTranslations } from "next-intl";
-import { unstable_setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import FirstSectionMain from "@/components/FirstSectionMain/FirstSectionMain";
 import DisposeTires from "@/components/DisposeTires/DisposeTires";
 import OurProducts from "@/components/OurProducts/OurProducts";
 import ApplicationSectionMain from "@/components/ApplicationsSectionMain/ApplicationSectionMain";
 import SubEmail from "@/components/SubEmail/SubEmail";
-import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 
 type Props = {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
 export async function generateMetadata({
-  params: { locale },
+  params,
 }: Omit<Props, "children">) {
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "MainPageMetadata" });
 
   return {
@@ -24,13 +22,11 @@ export async function generateMetadata({
   };
 }
 
-export default async function IndexPage({ params: { locale } }: Props) {
-  // Enable static rendering
-  unstable_setRequestLocale(locale);
+export default async function IndexPage({ params }: Props) {
+  const { locale } = await params;
 
-  // Providing all messages to the client
-  // side is the easiest way to get started
-  const messages = await getMessages();
+  // Enable static rendering
+  setRequestLocale(locale);
 
   return (
     <>
@@ -47,9 +43,7 @@ export default async function IndexPage({ params: { locale } }: Props) {
       <ApplicationSectionMain />
 
       {/* Subscribe to email list */}
-      {/* <NextIntlClientProvider messages={messages}>
-        <SubEmail />
-      </NextIntlClientProvider> */}
+      {/* <SubEmail /> */}
     </>
   );
 }

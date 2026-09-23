@@ -1,16 +1,16 @@
 import FinalComp from "./FinalComp/FinalComp";
-import { useTranslations } from "next-intl";
-import { unstable_setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import { getTranslations } from "next-intl/server";
 
 type Props = {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
 export async function generateMetadata({
   //Metadata for crumb rubber
-  params: { locale },
+  params,
 }: Omit<Props, "children">) {
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "CrumbRubberMetadata" });
 
   return {
@@ -19,9 +19,11 @@ export async function generateMetadata({
   };
 }
 
-export default function Page({ params: { locale } }: Props) {
+export default async function Page({ params }: Props) {
+  const { locale } = await params;
+
   // Enable static rendering
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
 
   return <FinalComp />;
 }
