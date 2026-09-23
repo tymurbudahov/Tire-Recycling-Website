@@ -1,36 +1,32 @@
 import clsx from "clsx";
 import { Inter } from "next/font/google";
-import {
-  getMessages,
-  getTranslations,
-  unstable_setRequestLocale,
-} from "next-intl/server";
+import { notFound } from "next/navigation";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ReactNode } from "react";
-import Head from "next/head";
 import Navigation from "@/components/Navigation";
-import { locales } from "@/config";
 import Footer from "@/components/Footer/Footer";
-// import { NextIntlClientProvider } from "next-intl";
-import NavigationTwo from "@/components/NavigationTwo";
+import { routing } from "@/i18n/routing";
 import GoogleAnalytics from "../googleAnalytics/googleAnalytics";
 // import ScrollToTop from "@/components/ScrollToTop";
-import PhoneIcon from "@/components/PhoneIcon";
+// import PhoneIcon from "@/components/PhoneIcon";
 
 const inter = Inter({ subsets: ["latin"] });
 
 type Props = {
   children: ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
 export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
+  return routing.locales.map((locale) => ({ locale }));
 }
 
 export async function generateMetadata({
   //Metadata for keywords
-  params: { locale },
+  params,
 }: Omit<Props, "children">) {
+  const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "KeywordsMeta" });
 
   return {
@@ -55,16 +51,14 @@ export async function generateMetadata({
   };
 }
 
-export default async function LocaleLayout({
-  children,
-  params: { locale },
-}: Props) {
-  // Enable static rendering
-  unstable_setRequestLocale(locale);
+export default async function LocaleLayout({ children, params }: Props) {
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
 
-  // Providing all messages to the client
-  // side is the easiest way to get started
-  const messages = await getMessages();
+  // Enable static rendering
+  setRequestLocale(locale);
 
   return (
     <html className="h-full" lang={locale}>
@@ -72,12 +66,15 @@ export default async function LocaleLayout({
       <body
         className={clsx(inter.className, "flex h-full flex-col bg-gray-900")}
       >
-        <Navigation />
-        <main className="flex-1">{children}</main>
-        {/* Getting error with fill-rule in footer component */}
-        <Footer />
-        {/* <PhoneIcon /> */}
-        {/* <ScrollToTop /> */}
+        {/* Makes messages available to all Client Components */}
+        <NextIntlClientProvider>
+          <Navigation />
+          <main className="flex-1">{children}</main>
+          {/* Getting error with fill-rule in footer component */}
+          <Footer />
+          {/* <PhoneIcon /> */}
+          {/* <ScrollToTop /> */}
+        </NextIntlClientProvider>
       </body>
     </html>
   );

@@ -1,9 +1,8 @@
 "use client";
 
 import clsx from "clsx";
-import { useParams } from "next/navigation";
 import { ChangeEvent, ReactNode, useTransition } from "react";
-import { useRouter, usePathname } from "@/navigation";
+import { useRouter, usePathname } from "@/i18n/navigation";
 
 type Props = {
   children: ReactNode;
@@ -19,16 +18,11 @@ export default function LocaleSwitcherSelect({
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
   const pathname = usePathname();
-  const params = useParams();
 
   function onSelectChange(event: ChangeEvent<HTMLSelectElement>) {
     const nextLocale = event.target.value;
     startTransition(() => {
-      router.replace(
-        // @ts-expect-error The current route and params are already paired.
-        { pathname, params },
-        { locale: nextLocale }
-      );
+      router.replace(pathname, { locale: nextLocale });
     });
   }
 
